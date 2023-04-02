@@ -1,0 +1,1834 @@
+[ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 1; ]
+import Toybox.Graphics;
+[ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 3; ]
+import Toybox.System;
+[ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 4; ]
+import Toybox.WatchUi;
+[ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 5; ]
+import Toybox.Time.Gregorian;
+[ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 6; ]
+import Toybox.Position;
+[ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 8; ]
+class RetroFaceView extends WatchUi.WatchFace{
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 8; ]
+    <init> {
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 10; @position = 8; ]
+    var isAwake = true;
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 11; @position = 8; ]
+    var digitalFont;
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 12; @position = 8; ]
+    var timeDrawableSec;
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 13; @position = 8; ]
+    var timeDrawableNoSec;
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 14; @position = 8; ]
+    var screenSize;
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 15; @position = 8; ]
+    var hrValue;
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 16; @position = 8; ]
+    var globe_grid;
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 18; ]
+    function initialize() as Void {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_18_26_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 20 8 ]
+        %tmp.2 = getv ? :WatchFace;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 21 8 ]
+        %tmp.4 = getm $.Toybox.WatchUi;
+        %tmp.5 = getv function %tmp.4 :loadResource;
+        %tmp.7 = getv ? :Rez;
+        %tmp.8 = getv %tmp.7 :Drawables;
+        %tmp.9 = getv %tmp.8 :globeBitmap;
+        %tmp.10 = invoke %tmp.4 %tmp.5(%tmp.9);
+        putv self :globe_grid %tmp.10;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_18_26_stop:
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 25; ]
+    function onLayout(dc as Dc) as Void {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_25_40_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 26 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        %tmp.4 = getv ? :Rez;
+        %tmp.5 = getv %tmp.4 :Layouts;
+        %tmp.6 = getv function %tmp.5 :WatchFace;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.9);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 27 8 ]
+        %tmp.10 = getm $.Toybox.WatchUi;
+        %tmp.11 = getv function %tmp.10 :loadResource;
+        %tmp.13 = getv ? :Rez;
+        %tmp.14 = getv %tmp.13 :Fonts;
+        %tmp.15 = getv %tmp.14 :digitalFont;
+        %tmp.16 = invoke %tmp.10 %tmp.11(%tmp.15);
+        putv self :digitalFont %tmp.16;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 28 8 ]
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :getWidth;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        putv self :screenSize %tmp.19;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_25_40_stop:
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 34; ]
+    function onShow() as Void {
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 39; ]
+    function onUpdate(dc as Dc) as Void {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 42 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %clockTime.1 = local;
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %clockTime.1 %tmp.3;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 53 8 ]
+        %tmp.5 = getv ? :View;
+        %tmp.6 = getv function %tmp.5 :onUpdate;
+        %tmp.8 = lgetv %dc;
+        invoke %tmp.5 %tmp.6(%tmp.8);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 55 8 ]
+        %tmp.9 = lgetv %dc;
+        %tmp.10 = getv function %tmp.9 :setColor;
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_BLACK;
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :COLOR_BLACK;
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.14);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 56 8 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :clear;
+        invoke %tmp.15 %tmp.16();
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 57 8 ]
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :setColor;
+        %tmp.19 = getm $.Toybox.Graphics;
+        %tmp.20 = getv %tmp.19 :COLOR_WHITE;
+        %tmp.21 = getm $.Toybox.Graphics;
+        %tmp.22 = getv %tmp.21 :COLOR_TRANSPARENT;
+        invoke %tmp.17 %tmp.18(%tmp.20, %tmp.22);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 59 8 ]
+        %tmp.23 = lgetv %dc;
+        %tmp.24 = getv function %tmp.23 :setPenWidth;
+        %tmp.25 = 1;
+        invoke %tmp.23 %tmp.24(%tmp.25);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 60 8 ]
+        %tmp.27 = getv ? :RetroFaceView;
+        %tmp.28 = getv function %tmp.27 :drawSlantedSeparator;
+        %tmp.30 = lgetv %dc;
+        %tmp.31 = 0;
+        %tmp.32 = self;
+        %tmp.33 = getv function %tmp.32 :adaptPx;
+        %tmp.34 = 50;
+        %tmp.35 = invoke %tmp.32 %tmp.33(%tmp.34);
+        %tmp.36 = self;
+        %tmp.37 = getv function %tmp.36 :adaptPx;
+        %tmp.38 = 24;
+        %tmp.39 = invoke %tmp.36 %tmp.37(%tmp.38);
+        %tmp.40 = self;
+        %tmp.41 = getv function %tmp.40 :adaptPx;
+        %tmp.42 = 90;
+        %tmp.43 = invoke %tmp.40 %tmp.41(%tmp.42);
+        %tmp.44 = self;
+        %tmp.45 = getv function %tmp.44 :adaptPx;
+        %tmp.46 = 70;
+        %tmp.47 = invoke %tmp.44 %tmp.45(%tmp.46);
+        %tmp.48 = 3;
+        invoke %tmp.27 %tmp.28(%tmp.30, %tmp.31, %tmp.35, %tmp.39, %tmp.43, %tmp.47, %tmp.48);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 61 8 ]
+        %tmp.50 = getv ? :RetroFaceView;
+        %tmp.51 = getv function %tmp.50 :drawSlantedSeparator;
+        %tmp.53 = lgetv %dc;
+        %tmp.54 = 0;
+        %tmp.55 = self;
+        %tmp.56 = getv function %tmp.55 :adaptPx;
+        %tmp.57 = 117;
+        %tmp.58 = invoke %tmp.55 %tmp.56(%tmp.57);
+        %tmp.59 = self;
+        %tmp.60 = getv function %tmp.59 :adaptPx;
+        %tmp.61 = 20;
+        %tmp.62 = invoke %tmp.59 %tmp.60(%tmp.61);
+        %tmp.63 = self;
+        %tmp.64 = getv function %tmp.63 :adaptPx;
+        %tmp.65 = 50;
+        %tmp.66 = invoke %tmp.63 %tmp.64(%tmp.65);
+        %tmp.67 = self;
+        %tmp.68 = getv function %tmp.67 :adaptPx;
+        %tmp.69 = 115;
+        %tmp.70 = invoke %tmp.67 %tmp.68(%tmp.69);
+        %tmp.71 = 3;
+        invoke %tmp.50 %tmp.51(%tmp.53, %tmp.54, %tmp.58, %tmp.62, %tmp.66, %tmp.70, %tmp.71);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 62 8 ]
+        %tmp.73 = getv ? :RetroFaceView;
+        %tmp.74 = getv function %tmp.73 :drawTexturedRect;
+        %tmp.76 = lgetv %dc;
+        %tmp.77 = 0;
+        %tmp.78 = 0;
+        %tmp.79 = self;
+        %tmp.80 = getv function %tmp.79 :adaptPx;
+        %tmp.81 = 190;
+        %tmp.82 = invoke %tmp.79 %tmp.80(%tmp.81);
+        %tmp.83 = self;
+        %tmp.84 = getv function %tmp.83 :adaptPx;
+        %tmp.85 = 74;
+        %tmp.86 = invoke %tmp.83 %tmp.84(%tmp.85);
+        %tmp.87 = 0.6;
+        %tmp.88 = false;
+        invoke %tmp.73 %tmp.74(%tmp.76, %tmp.77, %tmp.78, %tmp.82, %tmp.86, %tmp.87, %tmp.88);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 63 8 ]
+        %tmp.90 = getv ? :RetroFaceView;
+        %tmp.91 = getv function %tmp.90 :drawTexturedRect;
+        %tmp.93 = lgetv %dc;
+        %tmp.94 = 0;
+        %tmp.95 = self;
+        %tmp.96 = getv function %tmp.95 :adaptPx;
+        %tmp.97 = 115;
+        %tmp.98 = invoke %tmp.95 %tmp.96(%tmp.97);
+        %tmp.99 = self;
+        %tmp.100 = getv function %tmp.99 :adaptPx;
+        %tmp.101 = 190;
+        %tmp.102 = invoke %tmp.99 %tmp.100(%tmp.101);
+        %tmp.103 = self;
+        %tmp.104 = getv function %tmp.103 :adaptPx;
+        %tmp.105 = 190;
+        %tmp.106 = invoke %tmp.103 %tmp.104(%tmp.105);
+        %tmp.107 = 0.6;
+        %tmp.108 = false;
+        invoke %tmp.90 %tmp.91(%tmp.93, %tmp.94, %tmp.98, %tmp.102, %tmp.106, %tmp.107, %tmp.108);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 64 8 ]
+        %tmp.109 = lgetv %dc;
+        %tmp.110 = getv function %tmp.109 :setColor;
+        %tmp.111 = getm $.Toybox.Graphics;
+        %tmp.112 = getv %tmp.111 :COLOR_BLACK;
+        %tmp.113 = getm $.Toybox.Graphics;
+        %tmp.114 = getv %tmp.113 :COLOR_BLACK;
+        invoke %tmp.109 %tmp.110(%tmp.112, %tmp.114);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 65 8 ]
+        %tmp.115 = lgetv %dc;
+        %tmp.116 = getv function %tmp.115 :fillPolygon;
+        %tmp.117 = newa 8;
+        %tmp.118 = newa 2;
+        %tmp.119 = 0;
+        %tmp.120 = dup %tmp.118;
+        %tmp.121 = aputv %tmp.120 0 %tmp.119;
+        %tmp.122 = self;
+        %tmp.123 = getv function %tmp.122 :adaptPx;
+        %tmp.124 = 54;
+        %tmp.125 = invoke %tmp.122 %tmp.123(%tmp.124);
+        %tmp.126 = dup %tmp.121;
+        %tmp.127 = aputv %tmp.126 1 %tmp.125;
+        %tmp.128 = dup %tmp.117;
+        %tmp.129 = aputv %tmp.128 0 %tmp.127;
+        %tmp.130 = newa 2;
+        %tmp.131 = self;
+        %tmp.132 = getv function %tmp.131 :adaptPx;
+        %tmp.133 = 89;
+        %tmp.134 = invoke %tmp.131 %tmp.132(%tmp.133);
+        %tmp.135 = dup %tmp.130;
+        %tmp.136 = aputv %tmp.135 0 %tmp.134;
+        %tmp.137 = self;
+        %tmp.138 = getv function %tmp.137 :adaptPx;
+        %tmp.139 = 54;
+        %tmp.140 = invoke %tmp.137 %tmp.138(%tmp.139);
+        %tmp.141 = dup %tmp.136;
+        %tmp.142 = aputv %tmp.141 1 %tmp.140;
+        %tmp.143 = dup %tmp.129;
+        %tmp.144 = aputv %tmp.143 1 %tmp.142;
+        %tmp.145 = newa 2;
+        %tmp.146 = self;
+        %tmp.147 = getv function %tmp.146 :adaptPx;
+        %tmp.148 = 90;
+        %tmp.149 = 23;
+        %tmp.150 = add %tmp.148 %tmp.149;
+        %tmp.151 = invoke %tmp.146 %tmp.147(%tmp.150);
+        %tmp.152 = dup %tmp.145;
+        %tmp.153 = aputv %tmp.152 0 %tmp.151;
+        %tmp.154 = self;
+        %tmp.155 = getv function %tmp.154 :adaptPx;
+        %tmp.156 = 54;
+        %tmp.157 = 24;
+        %tmp.158 = add %tmp.156 %tmp.157;
+        %tmp.159 = invoke %tmp.154 %tmp.155(%tmp.158);
+        %tmp.160 = dup %tmp.153;
+        %tmp.161 = aputv %tmp.160 1 %tmp.159;
+        %tmp.162 = dup %tmp.144;
+        %tmp.163 = aputv %tmp.162 2 %tmp.161;
+        %tmp.164 = newa 2;
+        %tmp.165 = self;
+        %tmp.166 = getv function %tmp.165 :adaptPx;
+        %tmp.167 = 175;
+        %tmp.168 = invoke %tmp.165 %tmp.166(%tmp.167);
+        %tmp.169 = dup %tmp.164;
+        %tmp.170 = aputv %tmp.169 0 %tmp.168;
+        %tmp.171 = self;
+        %tmp.172 = getv function %tmp.171 :adaptPx;
+        %tmp.173 = 78;
+        %tmp.174 = invoke %tmp.171 %tmp.172(%tmp.173);
+        %tmp.175 = dup %tmp.170;
+        %tmp.176 = aputv %tmp.175 1 %tmp.174;
+        %tmp.177 = dup %tmp.163;
+        %tmp.178 = aputv %tmp.177 3 %tmp.176;
+        %tmp.179 = newa 2;
+        %tmp.180 = self;
+        %tmp.181 = getv function %tmp.180 :adaptPx;
+        %tmp.182 = 175;
+        %tmp.183 = invoke %tmp.180 %tmp.181(%tmp.182);
+        %tmp.184 = dup %tmp.179;
+        %tmp.185 = aputv %tmp.184 0 %tmp.183;
+        %tmp.186 = self;
+        %tmp.187 = getv function %tmp.186 :adaptPx;
+        %tmp.188 = 78;
+        %tmp.189 = 58;
+        %tmp.190 = add %tmp.188 %tmp.189;
+        %tmp.191 = invoke %tmp.186 %tmp.187(%tmp.190);
+        %tmp.192 = dup %tmp.185;
+        %tmp.193 = aputv %tmp.192 1 %tmp.191;
+        %tmp.194 = dup %tmp.178;
+        %tmp.195 = aputv %tmp.194 4 %tmp.193;
+        %tmp.196 = newa 2;
+        %tmp.197 = self;
+        %tmp.198 = getv function %tmp.197 :adaptPx;
+        %tmp.199 = 175;
+        %tmp.200 = 103;
+        %tmp.201 = sub %tmp.199 %tmp.200;
+        %tmp.202 = invoke %tmp.197 %tmp.198(%tmp.201);
+        %tmp.203 = dup %tmp.196;
+        %tmp.204 = aputv %tmp.203 0 %tmp.202;
+        %tmp.205 = self;
+        %tmp.206 = getv function %tmp.205 :adaptPx;
+        %tmp.207 = 78;
+        %tmp.208 = 58;
+        %tmp.209 = add %tmp.207 %tmp.208;
+        %tmp.210 = invoke %tmp.205 %tmp.206(%tmp.209);
+        %tmp.211 = dup %tmp.204;
+        %tmp.212 = aputv %tmp.211 1 %tmp.210;
+        %tmp.213 = dup %tmp.195;
+        %tmp.214 = aputv %tmp.213 5 %tmp.212;
+        %tmp.215 = newa 2;
+        %tmp.216 = self;
+        %tmp.217 = getv function %tmp.216 :adaptPx;
+        %tmp.218 = 175;
+        %tmp.219 = 103;
+        %tmp.220 = sub %tmp.218 %tmp.219;
+        %tmp.221 = 20;
+        %tmp.222 = sub %tmp.220 %tmp.221;
+        %tmp.223 = invoke %tmp.216 %tmp.217(%tmp.222);
+        %tmp.224 = dup %tmp.215;
+        %tmp.225 = aputv %tmp.224 0 %tmp.223;
+        %tmp.226 = self;
+        %tmp.227 = getv function %tmp.226 :adaptPx;
+        %tmp.228 = 78;
+        %tmp.229 = 58;
+        %tmp.230 = add %tmp.228 %tmp.229;
+        %tmp.231 = 20;
+        %tmp.232 = sub %tmp.230 %tmp.231;
+        %tmp.233 = invoke %tmp.226 %tmp.227(%tmp.232);
+        %tmp.234 = dup %tmp.225;
+        %tmp.235 = aputv %tmp.234 1 %tmp.233;
+        %tmp.236 = dup %tmp.214;
+        %tmp.237 = aputv %tmp.236 6 %tmp.235;
+        %tmp.238 = newa 2;
+        %tmp.239 = 0;
+        %tmp.240 = dup %tmp.238;
+        %tmp.241 = aputv %tmp.240 0 %tmp.239;
+        %tmp.242 = self;
+        %tmp.243 = getv function %tmp.242 :adaptPx;
+        %tmp.244 = 78;
+        %tmp.245 = 58;
+        %tmp.246 = add %tmp.244 %tmp.245;
+        %tmp.247 = 20;
+        %tmp.248 = sub %tmp.246 %tmp.247;
+        %tmp.249 = invoke %tmp.242 %tmp.243(%tmp.248);
+        %tmp.250 = dup %tmp.241;
+        %tmp.251 = aputv %tmp.250 1 %tmp.249;
+        %tmp.252 = dup %tmp.237;
+        %tmp.253 = aputv %tmp.252 7 %tmp.251;
+        invoke %tmp.115 %tmp.116(%tmp.253);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 73 8 ]
+        %tmp.255 = getv ? :RetroFaceView;
+        %tmp.256 = getv function %tmp.255 :drawParallelsPlanet;
+        %tmp.258 = lgetv %dc;
+        %tmp.259 = self;
+        %tmp.260 = getv function %tmp.259 :adaptPx;
+        %tmp.261 = 144;
+        %tmp.262 = invoke %tmp.259 %tmp.260(%tmp.261);
+        %tmp.263 = self;
+        %tmp.264 = getv function %tmp.263 :adaptPx;
+        %tmp.265 = 31;
+        %tmp.266 = invoke %tmp.263 %tmp.264(%tmp.265);
+        %tmp.267 = self;
+        %tmp.268 = getv function %tmp.267 :adaptPx;
+        %tmp.269 = 30;
+        %tmp.270 = invoke %tmp.267 %tmp.268(%tmp.269);
+        %tmp.271 = false;
+        invoke %tmp.255 %tmp.256(%tmp.258, %tmp.262, %tmp.266, %tmp.270, %tmp.271);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 76 8 ]
+        %tmp.273 = getv ? :RetroFaceView;
+        %tmp.274 = getv function %tmp.273 :textBox;
+        %tmp.276 = lgetv %dc;
+        %tmp.277 = self;
+        %tmp.278 = getv function %tmp.277 :adaptPx;
+        %tmp.279 = 71;
+        %tmp.280 = invoke %tmp.277 %tmp.278(%tmp.279);
+        %tmp.281 = self;
+        %tmp.282 = getv function %tmp.281 :adaptPx;
+        %tmp.283 = 148;
+        %tmp.284 = invoke %tmp.281 %tmp.282(%tmp.283);
+        %tmp.285 = self;
+        %tmp.286 = getv function %tmp.285 :adaptPx;
+        %tmp.287 = 84;
+        %tmp.288 = invoke %tmp.285 %tmp.286(%tmp.287);
+        %tmp.289 = self;
+        %tmp.290 = getv function %tmp.289 :adaptPx;
+        %tmp.291 = 18;
+        %tmp.292 = invoke %tmp.289 %tmp.290(%tmp.291);
+        %tmp.293 = self;
+        %tmp.294 = getv function %tmp.293 :fullCustomDate;
+        %tmp.295 = invoke %tmp.293 %tmp.294();
+        %tmp.296 = true;
+        invoke %tmp.273 %tmp.274(%tmp.276, %tmp.280, %tmp.284, %tmp.288, %tmp.292, %tmp.295, %tmp.296);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 83 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %steps.2 = local;
+        %tmp.298 = getv ? :ActivityMonitor;
+        %tmp.299 = getv function %tmp.298 :getInfo;
+        %tmp.300 = invoke %tmp.298 %tmp.299();
+        %tmp.301 = getv %tmp.300 :steps;
+        lputv %steps.2 %tmp.301;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 84 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %stepGoal.3 = local;
+        %tmp.303 = getv ? :ActivityMonitor;
+        %tmp.304 = getv function %tmp.303 :getInfo;
+        %tmp.305 = invoke %tmp.303 %tmp.304();
+        %tmp.306 = getv %tmp.305 :stepGoal;
+        lputv %stepGoal.3 %tmp.306;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 85 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %stepGoalAchieved.4 = local;
+        %tmp.308 = lgetv %steps.2;
+        %tmp.310 = lgetv %stepGoal.3;
+        %tmp.311 = gte %tmp.308 %tmp.310;
+        lputv %stepGoalAchieved.4 %tmp.311;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 86 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %stepAchievePercent.5 = local;
+        %tmp.312 = lgetv %steps.2;
+        %tmp.313 = getv function %tmp.312 :toFloat;
+        %tmp.314 = invoke %tmp.312 %tmp.313();
+        %tmp.315 = lgetv %stepGoal.3;
+        %tmp.316 = getv function %tmp.315 :toFloat;
+        %tmp.317 = invoke %tmp.315 %tmp.316();
+        %tmp.318 = div %tmp.314 %tmp.317;
+        lputv %stepAchievePercent.5 %tmp.318;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 88 8 ]
+        %tmp.319 = lgetv %dc;
+        %tmp.320 = getv function %tmp.319 :setColor;
+        %tmp.321 = getm $.Toybox.Graphics;
+        %tmp.322 = getv %tmp.321 :COLOR_WHITE;
+        %tmp.323 = getm $.Toybox.Graphics;
+        %tmp.324 = getv %tmp.323 :COLOR_TRANSPARENT;
+        invoke %tmp.319 %tmp.320(%tmp.322, %tmp.324);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 89 8 ]
+        %tmp.325 = lgetv %dc;
+        %tmp.326 = getv function %tmp.325 :drawText;
+        %tmp.328 = getv ? :Math;
+        %tmp.329 = getv function %tmp.328 :round;
+        %tmp.331 = getv ? :screenSize;
+        %tmp.332 = 0.28;
+        %tmp.333 = mul %tmp.331 %tmp.332;
+        %tmp.334 = invoke %tmp.328 %tmp.329(%tmp.333);
+        %tmp.335 = 116;
+        %tmp.336 = getm $.Toybox.Graphics;
+        %tmp.337 = getv %tmp.336 :FONT_SYSTEM_XTINY;
+        %tmp.338 = lgetv %steps.2;
+        %tmp.339 = getv function %tmp.338 :toString;
+        %tmp.340 = invoke %tmp.338 %tmp.339();
+        %tmp.341 = getm $.Toybox.Graphics;
+        %tmp.342 = getv %tmp.341 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.325 %tmp.326(%tmp.334, %tmp.335, %tmp.337, %tmp.340, %tmp.342);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 91 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %startX.6 = local;
+        %tmp.343 = self;
+        %tmp.344 = getv function %tmp.343 :adaptPx;
+        %tmp.345 = 10;
+        %tmp.346 = invoke %tmp.343 %tmp.344(%tmp.345);
+        lputv %startX.6 %tmp.346;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 92 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %startY.7 = local;
+        %tmp.347 = self;
+        %tmp.348 = getv function %tmp.347 :adaptPx;
+        %tmp.349 = 136;
+        %tmp.350 = invoke %tmp.347 %tmp.348(%tmp.349);
+        lputv %startY.7 %tmp.350;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 93 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %height.8 = local;
+        %tmp.351 = self;
+        %tmp.352 = getv function %tmp.351 :adaptPx;
+        %tmp.353 = 5;
+        %tmp.354 = invoke %tmp.351 %tmp.352(%tmp.353);
+        lputv %height.8 %tmp.354;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 94 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %width.9 = local;
+        %tmp.355 = self;
+        %tmp.356 = getv function %tmp.355 :adaptPx;
+        %tmp.357 = 50;
+        %tmp.358 = invoke %tmp.355 %tmp.356(%tmp.357);
+        lputv %width.9 %tmp.358;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 95 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %margin.10 = local;
+        %tmp.359 = self;
+        %tmp.360 = getv function %tmp.359 :adaptPx;
+        %tmp.361 = 2;
+        %tmp.362 = invoke %tmp.359 %tmp.360(%tmp.361);
+        lputv %margin.10 %tmp.362;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 96 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %numOfBars.11 = local;
+        %tmp.363 = 5.0;
+        lputv %numOfBars.11 %tmp.363;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 97 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %fixedX.12 = local;
+        %tmp.365 = lgetv %startX.6;
+        %tmp.367 = lgetv %width.9;
+        %tmp.368 = add %tmp.365 %tmp.367;
+        lputv %fixedX.12 %tmp.368;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 99 8 ]
+        for @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_8_for_test @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_8_for_incr @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_8_for_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_8_for_init:
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_8_for_begin" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_8_for_end" ]
+        %i.13 = local;
+        %tmp.369 = 0;
+        lputv %i.13 %tmp.369;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_8_for_test:
+        %tmp.371 = lgetv %i.13;
+        %tmp.373 = lgetv %numOfBars.11;
+        %tmp.374 = lt %tmp.371 %tmp.373;
+        bf %tmp.374 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_8_for_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_8_for_begin:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_36_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 100 12 ]
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_12_if_stmt:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_15_begin:
+        %tmp.376 = lgetv %stepGoalAchieved.4;
+        %tmp.377 = not %tmp.376;
+        %tmp.378 = dup %tmp.377;
+        bf %tmp.378 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_36_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_36_true:
+        %tmp.380 = lgetv %numOfBars.11;
+        %tmp.382 = lgetv %i.13;
+        %tmp.383 = sub %tmp.380 %tmp.382;
+        %tmp.385 = lgetv %numOfBars.11;
+        %tmp.386 = div %tmp.383 %tmp.385;
+        %tmp.388 = lgetv %stepAchievePercent.5;
+        %tmp.389 = gt %tmp.386 %tmp.388;
+        %tmp.390 = and %tmp.377 %tmp.389;
+        push %tmp.390;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_36_end:
+        %tmp.391 = phi [%tmp.378 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_15_begin] [%tmp.390 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_36_true] [%tmp.391 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_36_end];
+        bf %tmp.391 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_12_if_false;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_12_if_true:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_85_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 101 16 ]
+        %tmp.392 = lgetv %dc;
+        %tmp.393 = getv function %tmp.392 :setColor;
+        %tmp.394 = getm $.Toybox.Graphics;
+        %tmp.395 = getv %tmp.394 :COLOR_BLACK;
+        %tmp.396 = getm $.Toybox.Graphics;
+        %tmp.397 = getv %tmp.396 :COLOR_BLACK;
+        invoke %tmp.392 %tmp.393(%tmp.395, %tmp.397);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 102 16 ]
+        %tmp.398 = lgetv %dc;
+        %tmp.399 = getv function %tmp.398 :fillRoundedRectangle;
+        %tmp.401 = lgetv %startX.6;
+        %tmp.403 = lgetv %startY.7;
+        %tmp.405 = lgetv %width.9;
+        %tmp.407 = lgetv %height.8;
+        %tmp.408 = 1;
+        invoke %tmp.398 %tmp.399(%tmp.401, %tmp.403, %tmp.405, %tmp.407, %tmp.408);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 103 16 ]
+        %tmp.409 = lgetv %dc;
+        %tmp.410 = getv function %tmp.409 :setColor;
+        %tmp.411 = getm $.Toybox.Graphics;
+        %tmp.412 = getv %tmp.411 :COLOR_WHITE;
+        %tmp.413 = getm $.Toybox.Graphics;
+        %tmp.414 = getv %tmp.413 :COLOR_TRANSPARENT;
+        invoke %tmp.409 %tmp.410(%tmp.412, %tmp.414);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 104 16 ]
+        %tmp.415 = lgetv %dc;
+        %tmp.416 = getv function %tmp.415 :drawRoundedRectangle;
+        %tmp.418 = lgetv %startX.6;
+        %tmp.420 = lgetv %startY.7;
+        %tmp.422 = lgetv %width.9;
+        %tmp.424 = lgetv %height.8;
+        %tmp.425 = 1;
+        invoke %tmp.415 %tmp.416(%tmp.418, %tmp.420, %tmp.422, %tmp.424, %tmp.425);
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_85_stop:
+        goto @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_12_if_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_12_if_false:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_106_16_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 107 16 ]
+        %tmp.426 = lgetv %dc;
+        %tmp.427 = getv function %tmp.426 :fillRoundedRectangle;
+        %tmp.429 = lgetv %startX.6;
+        %tmp.431 = lgetv %startY.7;
+        %tmp.433 = lgetv %width.9;
+        %tmp.435 = lgetv %height.8;
+        %tmp.436 = 1;
+        invoke %tmp.426 %tmp.427(%tmp.429, %tmp.431, %tmp.433, %tmp.435, %tmp.436);
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_106_16_stop:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_100_12_if_end:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 109 12 ]
+        %tmp.437 = lgetv %width.9;
+        %tmp.438 = 5;
+        %tmp.439 = sub %tmp.437 %tmp.438;
+        lputv %width.9 %tmp.439;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 110 12 ]
+        %tmp.441 = lgetv %fixedX.12;
+        %tmp.443 = lgetv %width.9;
+        %tmp.444 = sub %tmp.441 %tmp.443;
+        lputv %startX.6 %tmp.444;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 111 12 ]
+        %tmp.445 = lgetv %startY.7;
+        %tmp.447 = lgetv %height.8;
+        %tmp.449 = lgetv %margin.10;
+        %tmp.450 = add %tmp.447 %tmp.449;
+        %tmp.451 = add %tmp.445 %tmp.450;
+        lputv %startY.7 %tmp.451;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_36_stop:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_8_for_incr:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 99 ]
+        %tmp.454 = lgetv %i.13;
+        %tmp.455 = add %tmp.454 1;
+        lputv %i.13 %tmp.455;
+        goto @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_8_for_test;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_99_8_for_end:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 117 8 ]
+        %tmp.456 = lgetv %dc;
+        %tmp.457 = getv function %tmp.456 :setColor;
+        %tmp.458 = getm $.Toybox.Graphics;
+        %tmp.459 = getv %tmp.458 :COLOR_WHITE;
+        %tmp.460 = getm $.Toybox.Graphics;
+        %tmp.461 = getv %tmp.460 :COLOR_WHITE;
+        invoke %tmp.456 %tmp.457(%tmp.459, %tmp.461);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 118 8 ]
+        %tmp.462 = lgetv %dc;
+        %tmp.463 = getv function %tmp.462 :fillPolygon;
+        %tmp.464 = newa 4;
+        %tmp.465 = newa 2;
+        %tmp.466 = self;
+        %tmp.467 = getv function %tmp.466 :adaptPx;
+        %tmp.468 = 40;
+        %tmp.469 = invoke %tmp.466 %tmp.467(%tmp.468);
+        %tmp.470 = dup %tmp.465;
+        %tmp.471 = aputv %tmp.470 0 %tmp.469;
+        %tmp.472 = self;
+        %tmp.473 = getv function %tmp.472 :adaptPx;
+        %tmp.474 = 5;
+        %tmp.475 = invoke %tmp.472 %tmp.473(%tmp.474);
+        %tmp.476 = dup %tmp.471;
+        %tmp.477 = aputv %tmp.476 1 %tmp.475;
+        %tmp.478 = dup %tmp.464;
+        %tmp.479 = aputv %tmp.478 0 %tmp.477;
+        %tmp.480 = newa 2;
+        %tmp.481 = self;
+        %tmp.482 = getv function %tmp.481 :adaptPx;
+        %tmp.483 = 110;
+        %tmp.484 = invoke %tmp.481 %tmp.482(%tmp.483);
+        %tmp.485 = dup %tmp.480;
+        %tmp.486 = aputv %tmp.485 0 %tmp.484;
+        %tmp.487 = self;
+        %tmp.488 = getv function %tmp.487 :adaptPx;
+        %tmp.489 = 5;
+        %tmp.490 = invoke %tmp.487 %tmp.488(%tmp.489);
+        %tmp.491 = dup %tmp.486;
+        %tmp.492 = aputv %tmp.491 1 %tmp.490;
+        %tmp.493 = dup %tmp.479;
+        %tmp.494 = aputv %tmp.493 1 %tmp.492;
+        %tmp.495 = newa 2;
+        %tmp.496 = self;
+        %tmp.497 = getv function %tmp.496 :adaptPx;
+        %tmp.498 = 110;
+        %tmp.499 = invoke %tmp.496 %tmp.497(%tmp.498);
+        %tmp.500 = dup %tmp.495;
+        %tmp.501 = aputv %tmp.500 0 %tmp.499;
+        %tmp.502 = self;
+        %tmp.503 = getv function %tmp.502 :adaptPx;
+        %tmp.504 = 25;
+        %tmp.505 = invoke %tmp.502 %tmp.503(%tmp.504);
+        %tmp.506 = dup %tmp.501;
+        %tmp.507 = aputv %tmp.506 1 %tmp.505;
+        %tmp.508 = dup %tmp.494;
+        %tmp.509 = aputv %tmp.508 2 %tmp.507;
+        %tmp.510 = newa 2;
+        %tmp.511 = self;
+        %tmp.512 = getv function %tmp.511 :adaptPx;
+        %tmp.513 = 50;
+        %tmp.514 = invoke %tmp.511 %tmp.512(%tmp.513);
+        %tmp.515 = dup %tmp.510;
+        %tmp.516 = aputv %tmp.515 0 %tmp.514;
+        %tmp.517 = self;
+        %tmp.518 = getv function %tmp.517 :adaptPx;
+        %tmp.519 = 25;
+        %tmp.520 = invoke %tmp.517 %tmp.518(%tmp.519);
+        %tmp.521 = dup %tmp.516;
+        %tmp.522 = aputv %tmp.521 1 %tmp.520;
+        %tmp.523 = dup %tmp.509;
+        %tmp.524 = aputv %tmp.523 3 %tmp.522;
+        invoke %tmp.462 %tmp.463(%tmp.524);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 124 8 ]
+        %tmp.525 = lgetv %dc;
+        %tmp.526 = getv function %tmp.525 :setColor;
+        %tmp.527 = getm $.Toybox.Graphics;
+        %tmp.528 = getv %tmp.527 :COLOR_BLACK;
+        %tmp.529 = getm $.Toybox.Graphics;
+        %tmp.530 = getv %tmp.529 :COLOR_TRANSPARENT;
+        invoke %tmp.525 %tmp.526(%tmp.528, %tmp.530);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 125 8 ]
+        %tmp.531 = lgetv %dc;
+        %tmp.532 = getv function %tmp.531 :setPenWidth;
+        %tmp.533 = 1;
+        invoke %tmp.531 %tmp.532(%tmp.533);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 126 8 ]
+        %tmp.534 = self;
+        %tmp.535 = getv function %tmp.534 :drawPolygon;
+        %tmp.537 = lgetv %dc;
+        %tmp.538 = newa 4;
+        %tmp.539 = newa 2;
+        %tmp.540 = self;
+        %tmp.541 = getv function %tmp.540 :adaptPx;
+        %tmp.542 = 42;
+        %tmp.543 = invoke %tmp.540 %tmp.541(%tmp.542);
+        %tmp.544 = dup %tmp.539;
+        %tmp.545 = aputv %tmp.544 0 %tmp.543;
+        %tmp.546 = self;
+        %tmp.547 = getv function %tmp.546 :adaptPx;
+        %tmp.548 = 6;
+        %tmp.549 = invoke %tmp.546 %tmp.547(%tmp.548);
+        %tmp.550 = dup %tmp.545;
+        %tmp.551 = aputv %tmp.550 1 %tmp.549;
+        %tmp.552 = dup %tmp.538;
+        %tmp.553 = aputv %tmp.552 0 %tmp.551;
+        %tmp.554 = newa 2;
+        %tmp.555 = self;
+        %tmp.556 = getv function %tmp.555 :adaptPx;
+        %tmp.557 = 108;
+        %tmp.558 = invoke %tmp.555 %tmp.556(%tmp.557);
+        %tmp.559 = dup %tmp.554;
+        %tmp.560 = aputv %tmp.559 0 %tmp.558;
+        %tmp.561 = self;
+        %tmp.562 = getv function %tmp.561 :adaptPx;
+        %tmp.563 = 6;
+        %tmp.564 = invoke %tmp.561 %tmp.562(%tmp.563);
+        %tmp.565 = dup %tmp.560;
+        %tmp.566 = aputv %tmp.565 1 %tmp.564;
+        %tmp.567 = dup %tmp.553;
+        %tmp.568 = aputv %tmp.567 1 %tmp.566;
+        %tmp.569 = newa 2;
+        %tmp.570 = self;
+        %tmp.571 = getv function %tmp.570 :adaptPx;
+        %tmp.572 = 108;
+        %tmp.573 = invoke %tmp.570 %tmp.571(%tmp.572);
+        %tmp.574 = dup %tmp.569;
+        %tmp.575 = aputv %tmp.574 0 %tmp.573;
+        %tmp.576 = self;
+        %tmp.577 = getv function %tmp.576 :adaptPx;
+        %tmp.578 = 24;
+        %tmp.579 = invoke %tmp.576 %tmp.577(%tmp.578);
+        %tmp.580 = dup %tmp.575;
+        %tmp.581 = aputv %tmp.580 1 %tmp.579;
+        %tmp.582 = dup %tmp.568;
+        %tmp.583 = aputv %tmp.582 2 %tmp.581;
+        %tmp.584 = newa 2;
+        %tmp.585 = self;
+        %tmp.586 = getv function %tmp.585 :adaptPx;
+        %tmp.587 = 52;
+        %tmp.588 = invoke %tmp.585 %tmp.586(%tmp.587);
+        %tmp.589 = dup %tmp.584;
+        %tmp.590 = aputv %tmp.589 0 %tmp.588;
+        %tmp.591 = self;
+        %tmp.592 = getv function %tmp.591 :adaptPx;
+        %tmp.593 = 24;
+        %tmp.594 = invoke %tmp.591 %tmp.592(%tmp.593);
+        %tmp.595 = dup %tmp.590;
+        %tmp.596 = aputv %tmp.595 1 %tmp.594;
+        %tmp.597 = dup %tmp.583;
+        %tmp.598 = aputv %tmp.597 3 %tmp.596;
+        invoke %tmp.534 %tmp.535(%tmp.537, %tmp.598);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 132 8 ]
+        %tmp.599 = self;
+        %tmp.600 = getv function %tmp.599 :computeActivityInfo;
+        %tmp.602 = getv ? :Activity;
+        %tmp.603 = getv function %tmp.602 :getActivityInfo;
+        %tmp.604 = invoke %tmp.602 %tmp.603();
+        invoke %tmp.599 %tmp.600(%tmp.604);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 133 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %hrString.14 = local;
+        %tmp.605 = "HR ";
+        %tmp.607 = getv ? :hrValue;
+        %tmp.608 = getv function %tmp.607 :format;
+        %tmp.609 = "%03d";
+        %tmp.610 = invoke %tmp.607 %tmp.608(%tmp.609);
+        %tmp.611 = add %tmp.605 %tmp.610;
+        lputv %hrString.14 %tmp.611;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 134 8 ]
+        %tmp.612 = lgetv %dc;
+        %tmp.613 = getv function %tmp.612 :drawText;
+        %tmp.614 = self;
+        %tmp.615 = getv function %tmp.614 :adaptPx;
+        %tmp.616 = 50;
+        %tmp.617 = invoke %tmp.614 %tmp.615(%tmp.616);
+        %tmp.618 = self;
+        %tmp.619 = getv function %tmp.618 :adaptPx;
+        %tmp.620 = 2;
+        %tmp.621 = invoke %tmp.618 %tmp.619(%tmp.620);
+        %tmp.622 = getm $.Toybox.Graphics;
+        %tmp.623 = getv %tmp.622 :FONT_SMALL;
+        %tmp.625 = lgetv %hrString.14;
+        %tmp.626 = getm $.Toybox.Graphics;
+        %tmp.627 = getv %tmp.626 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.612 %tmp.613(%tmp.617, %tmp.621, %tmp.623, %tmp.625, %tmp.627);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 137 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %batteryLevel.15 = local;
+        %tmp.629 = getv ? :Math;
+        %tmp.630 = getv function %tmp.629 :floor;
+        %tmp.631 = getm $.Toybox.System;
+        %tmp.632 = getv function %tmp.631 :getSystemStats;
+        %tmp.633 = invoke %tmp.631 %tmp.632();
+        %tmp.634 = getv %tmp.633 :batteryInDays;
+        %tmp.635 = invoke %tmp.629 %tmp.630(%tmp.634);
+        %tmp.636 = getv function %tmp.635 :format;
+        %tmp.637 = "%02d";
+        %tmp.638 = invoke %tmp.635 %tmp.636(%tmp.637);
+        lputv %batteryLevel.15 %tmp.638;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 138 8 ]
+        %tmp.639 = lgetv %dc;
+        %tmp.640 = getv function %tmp.639 :setColor;
+        %tmp.641 = getm $.Toybox.Graphics;
+        %tmp.642 = getv %tmp.641 :COLOR_WHITE;
+        %tmp.643 = getm $.Toybox.Graphics;
+        %tmp.644 = getv %tmp.643 :COLOR_TRANSPARENT;
+        invoke %tmp.639 %tmp.640(%tmp.642, %tmp.644);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 139 8 ]
+        %tmp.645 = lgetv %dc;
+        %tmp.646 = getv function %tmp.645 :drawText;
+        %tmp.647 = self;
+        %tmp.648 = getv function %tmp.647 :adaptPx;
+        %tmp.649 = 23;
+        %tmp.650 = invoke %tmp.647 %tmp.648(%tmp.649);
+        %tmp.651 = self;
+        %tmp.652 = getv function %tmp.651 :adaptPx;
+        %tmp.653 = 25;
+        %tmp.654 = invoke %tmp.651 %tmp.652(%tmp.653);
+        %tmp.655 = getm $.Toybox.Graphics;
+        %tmp.656 = getv %tmp.655 :FONT_SYSTEM_TINY;
+        %tmp.658 = lgetv %batteryLevel.15;
+        %tmp.659 = "d";
+        %tmp.660 = add %tmp.658 %tmp.659;
+        %tmp.661 = getm $.Toybox.Graphics;
+        %tmp.662 = getv %tmp.661 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.645 %tmp.646(%tmp.650, %tmp.654, %tmp.656, %tmp.660, %tmp.662);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 141 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %battPolyHeight.16 = local;
+        %tmp.663 = self;
+        %tmp.664 = getv function %tmp.663 :adaptPx;
+        %tmp.665 = 10;
+        %tmp.666 = invoke %tmp.663 %tmp.664(%tmp.665);
+        lputv %battPolyHeight.16 %tmp.666;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 142 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %battPolyInitialWidth.17 = local;
+        %tmp.667 = self;
+        %tmp.668 = getv function %tmp.667 :adaptPx;
+        %tmp.669 = 47;
+        %tmp.670 = invoke %tmp.667 %tmp.668(%tmp.669);
+        lputv %battPolyInitialWidth.17 %tmp.670;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 143 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %polyStartX.18 = local;
+        %tmp.671 = self;
+        %tmp.672 = getv function %tmp.671 :adaptPx;
+        %tmp.673 = 54;
+        %tmp.674 = invoke %tmp.671 %tmp.672(%tmp.673);
+        lputv %polyStartX.18 %tmp.674;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 144 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %polyStartY.19 = local;
+        %tmp.675 = self;
+        %tmp.676 = getv function %tmp.675 :adaptPx;
+        %tmp.677 = 33;
+        %tmp.678 = invoke %tmp.675 %tmp.676(%tmp.677);
+        lputv %polyStartY.19 %tmp.678;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 145 8 ]
+        %tmp.679 = lgetv %dc;
+        %tmp.680 = getv function %tmp.679 :setColor;
+        %tmp.681 = getm $.Toybox.Graphics;
+        %tmp.682 = getv %tmp.681 :COLOR_BLACK;
+        %tmp.683 = getm $.Toybox.Graphics;
+        %tmp.684 = getv %tmp.683 :COLOR_TRANSPARENT;
+        invoke %tmp.679 %tmp.680(%tmp.682, %tmp.684);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 146 8 ]
+        %tmp.685 = lgetv %dc;
+        %tmp.686 = getv function %tmp.685 :fillPolygon;
+        %tmp.687 = newa 4;
+        %tmp.688 = newa 2;
+        %tmp.690 = lgetv %polyStartX.18;
+        %tmp.691 = dup %tmp.688;
+        %tmp.692 = aputv %tmp.691 0 %tmp.690;
+        %tmp.694 = lgetv %polyStartY.19;
+        %tmp.695 = dup %tmp.692;
+        %tmp.696 = aputv %tmp.695 1 %tmp.694;
+        %tmp.697 = dup %tmp.687;
+        %tmp.698 = aputv %tmp.697 0 %tmp.696;
+        %tmp.699 = newa 2;
+        %tmp.701 = lgetv %polyStartX.18;
+        %tmp.703 = lgetv %battPolyInitialWidth.17;
+        %tmp.704 = add %tmp.701 %tmp.703;
+        %tmp.705 = dup %tmp.699;
+        %tmp.706 = aputv %tmp.705 0 %tmp.704;
+        %tmp.708 = lgetv %polyStartY.19;
+        %tmp.709 = dup %tmp.706;
+        %tmp.710 = aputv %tmp.709 1 %tmp.708;
+        %tmp.711 = dup %tmp.698;
+        %tmp.712 = aputv %tmp.711 1 %tmp.710;
+        %tmp.713 = newa 2;
+        %tmp.715 = lgetv %polyStartX.18;
+        %tmp.717 = lgetv %battPolyInitialWidth.17;
+        %tmp.718 = add %tmp.715 %tmp.717;
+        %tmp.719 = dup %tmp.713;
+        %tmp.720 = aputv %tmp.719 0 %tmp.718;
+        %tmp.722 = lgetv %polyStartY.19;
+        %tmp.724 = lgetv %battPolyHeight.16;
+        %tmp.725 = add %tmp.722 %tmp.724;
+        %tmp.726 = dup %tmp.720;
+        %tmp.727 = aputv %tmp.726 1 %tmp.725;
+        %tmp.728 = dup %tmp.712;
+        %tmp.729 = aputv %tmp.728 2 %tmp.727;
+        %tmp.730 = newa 2;
+        %tmp.732 = lgetv %polyStartX.18;
+        %tmp.734 = getv ? :Math;
+        %tmp.735 = getv function %tmp.734 :round;
+        %tmp.737 = lgetv %battPolyHeight.16;
+        %tmp.738 = 2;
+        %tmp.739 = div %tmp.737 %tmp.738;
+        %tmp.740 = invoke %tmp.734 %tmp.735(%tmp.739);
+        %tmp.741 = add %tmp.732 %tmp.740;
+        %tmp.742 = dup %tmp.730;
+        %tmp.743 = aputv %tmp.742 0 %tmp.741;
+        %tmp.745 = lgetv %polyStartY.19;
+        %tmp.747 = lgetv %battPolyHeight.16;
+        %tmp.748 = add %tmp.745 %tmp.747;
+        %tmp.749 = dup %tmp.743;
+        %tmp.750 = aputv %tmp.749 1 %tmp.748;
+        %tmp.751 = dup %tmp.729;
+        %tmp.752 = aputv %tmp.751 3 %tmp.750;
+        invoke %tmp.685 %tmp.686(%tmp.752);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 152 8 ]
+        %tmp.753 = lgetv %dc;
+        %tmp.754 = getv function %tmp.753 :setColor;
+        %tmp.755 = getm $.Toybox.Graphics;
+        %tmp.756 = getv %tmp.755 :COLOR_WHITE;
+        %tmp.757 = getm $.Toybox.Graphics;
+        %tmp.758 = getv %tmp.757 :COLOR_BLACK;
+        invoke %tmp.753 %tmp.754(%tmp.756, %tmp.758);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 153 8 ]
+        %tmp.759 = lgetv %dc;
+        %tmp.760 = getv function %tmp.759 :setPenWidth;
+        %tmp.761 = 2;
+        invoke %tmp.759 %tmp.760(%tmp.761);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 154 8 ]
+        %tmp.762 = self;
+        %tmp.763 = getv function %tmp.762 :drawPolygon;
+        %tmp.765 = lgetv %dc;
+        %tmp.766 = newa 4;
+        %tmp.767 = newa 2;
+        %tmp.769 = lgetv %polyStartX.18;
+        %tmp.770 = dup %tmp.767;
+        %tmp.771 = aputv %tmp.770 0 %tmp.769;
+        %tmp.773 = lgetv %polyStartY.19;
+        %tmp.774 = dup %tmp.771;
+        %tmp.775 = aputv %tmp.774 1 %tmp.773;
+        %tmp.776 = dup %tmp.766;
+        %tmp.777 = aputv %tmp.776 0 %tmp.775;
+        %tmp.778 = newa 2;
+        %tmp.780 = lgetv %polyStartX.18;
+        %tmp.782 = lgetv %battPolyInitialWidth.17;
+        %tmp.783 = add %tmp.780 %tmp.782;
+        %tmp.784 = dup %tmp.778;
+        %tmp.785 = aputv %tmp.784 0 %tmp.783;
+        %tmp.787 = lgetv %polyStartY.19;
+        %tmp.788 = dup %tmp.785;
+        %tmp.789 = aputv %tmp.788 1 %tmp.787;
+        %tmp.790 = dup %tmp.777;
+        %tmp.791 = aputv %tmp.790 1 %tmp.789;
+        %tmp.792 = newa 2;
+        %tmp.794 = lgetv %polyStartX.18;
+        %tmp.796 = lgetv %battPolyInitialWidth.17;
+        %tmp.797 = add %tmp.794 %tmp.796;
+        %tmp.798 = dup %tmp.792;
+        %tmp.799 = aputv %tmp.798 0 %tmp.797;
+        %tmp.801 = lgetv %polyStartY.19;
+        %tmp.803 = lgetv %battPolyHeight.16;
+        %tmp.804 = add %tmp.801 %tmp.803;
+        %tmp.805 = dup %tmp.799;
+        %tmp.806 = aputv %tmp.805 1 %tmp.804;
+        %tmp.807 = dup %tmp.791;
+        %tmp.808 = aputv %tmp.807 2 %tmp.806;
+        %tmp.809 = newa 2;
+        %tmp.811 = lgetv %polyStartX.18;
+        %tmp.813 = getv ? :Math;
+        %tmp.814 = getv function %tmp.813 :round;
+        %tmp.816 = lgetv %battPolyHeight.16;
+        %tmp.817 = 2;
+        %tmp.818 = div %tmp.816 %tmp.817;
+        %tmp.819 = invoke %tmp.813 %tmp.814(%tmp.818);
+        %tmp.820 = add %tmp.811 %tmp.819;
+        %tmp.821 = dup %tmp.809;
+        %tmp.822 = aputv %tmp.821 0 %tmp.820;
+        %tmp.824 = lgetv %polyStartY.19;
+        %tmp.826 = lgetv %battPolyHeight.16;
+        %tmp.827 = add %tmp.824 %tmp.826;
+        %tmp.828 = dup %tmp.822;
+        %tmp.829 = aputv %tmp.828 1 %tmp.827;
+        %tmp.830 = dup %tmp.808;
+        %tmp.831 = aputv %tmp.830 3 %tmp.829;
+        invoke %tmp.762 %tmp.763(%tmp.765, %tmp.831);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 160 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %partialFill.20 = local;
+        %tmp.833 = getv ? :Math;
+        %tmp.834 = getv function %tmp.833 :round;
+        %tmp.836 = lgetv %battPolyInitialWidth.17;
+        %tmp.837 = getm $.Toybox.System;
+        %tmp.838 = getv function %tmp.837 :getSystemStats;
+        %tmp.839 = invoke %tmp.837 %tmp.838();
+        %tmp.840 = getv %tmp.839 :battery;
+        %tmp.841 = mul %tmp.836 %tmp.840;
+        %tmp.842 = 100;
+        %tmp.843 = div %tmp.841 %tmp.842;
+        %tmp.844 = invoke %tmp.833 %tmp.834(%tmp.843);
+        lputv %partialFill.20 %tmp.844;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 161 8 ]
+        %tmp.846 = lgetv %polyStartX.18;
+        %tmp.848 = lgetv %battPolyInitialWidth.17;
+        %tmp.849 = add %tmp.846 %tmp.848;
+        %tmp.851 = lgetv %partialFill.20;
+        %tmp.852 = sub %tmp.849 %tmp.851;
+        lputv %polyStartX.18 %tmp.852;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 162 8 ]
+        %tmp.853 = lgetv %dc;
+        %tmp.854 = getv function %tmp.853 :fillPolygon;
+        %tmp.855 = newa 4;
+        %tmp.856 = newa 2;
+        %tmp.858 = lgetv %polyStartX.18;
+        %tmp.859 = dup %tmp.856;
+        %tmp.860 = aputv %tmp.859 0 %tmp.858;
+        %tmp.862 = lgetv %polyStartY.19;
+        %tmp.863 = dup %tmp.860;
+        %tmp.864 = aputv %tmp.863 1 %tmp.862;
+        %tmp.865 = dup %tmp.855;
+        %tmp.866 = aputv %tmp.865 0 %tmp.864;
+        %tmp.867 = newa 2;
+        %tmp.869 = lgetv %polyStartX.18;
+        %tmp.871 = lgetv %partialFill.20;
+        %tmp.872 = add %tmp.869 %tmp.871;
+        %tmp.873 = dup %tmp.867;
+        %tmp.874 = aputv %tmp.873 0 %tmp.872;
+        %tmp.876 = lgetv %polyStartY.19;
+        %tmp.877 = dup %tmp.874;
+        %tmp.878 = aputv %tmp.877 1 %tmp.876;
+        %tmp.879 = dup %tmp.866;
+        %tmp.880 = aputv %tmp.879 1 %tmp.878;
+        %tmp.881 = newa 2;
+        %tmp.883 = lgetv %polyStartX.18;
+        %tmp.885 = lgetv %partialFill.20;
+        %tmp.886 = add %tmp.883 %tmp.885;
+        %tmp.887 = dup %tmp.881;
+        %tmp.888 = aputv %tmp.887 0 %tmp.886;
+        %tmp.890 = lgetv %polyStartY.19;
+        %tmp.892 = lgetv %battPolyHeight.16;
+        %tmp.893 = add %tmp.890 %tmp.892;
+        %tmp.894 = dup %tmp.888;
+        %tmp.895 = aputv %tmp.894 1 %tmp.893;
+        %tmp.896 = dup %tmp.880;
+        %tmp.897 = aputv %tmp.896 2 %tmp.895;
+        %tmp.898 = newa 2;
+        %tmp.900 = lgetv %polyStartX.18;
+        %tmp.902 = getv ? :Math;
+        %tmp.903 = getv function %tmp.902 :round;
+        %tmp.905 = lgetv %battPolyHeight.16;
+        %tmp.906 = 2;
+        %tmp.907 = div %tmp.905 %tmp.906;
+        %tmp.908 = invoke %tmp.902 %tmp.903(%tmp.907);
+        %tmp.909 = add %tmp.900 %tmp.908;
+        %tmp.910 = dup %tmp.898;
+        %tmp.911 = aputv %tmp.910 0 %tmp.909;
+        %tmp.913 = lgetv %polyStartY.19;
+        %tmp.915 = lgetv %battPolyHeight.16;
+        %tmp.916 = add %tmp.913 %tmp.915;
+        %tmp.917 = dup %tmp.911;
+        %tmp.918 = aputv %tmp.917 1 %tmp.916;
+        %tmp.919 = dup %tmp.897;
+        %tmp.920 = aputv %tmp.919 3 %tmp.918;
+        invoke %tmp.853 %tmp.854(%tmp.920);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 170 8 ]
+        %tmp.921 = lgetv %dc;
+        %tmp.922 = getv function %tmp.921 :setColor;
+        %tmp.923 = getm $.Toybox.Graphics;
+        %tmp.924 = getv %tmp.923 :COLOR_WHITE;
+        %tmp.925 = getm $.Toybox.Graphics;
+        %tmp.926 = getv %tmp.925 :COLOR_TRANSPARENT;
+        invoke %tmp.921 %tmp.922(%tmp.924, %tmp.926);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 171 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %timeString.21 = local;
+        %tmp.927 = null;
+        lputv %timeString.21 %tmp.927;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 172 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop" ]
+        %timePlacement.22 = local;
+        %tmp.928 = null;
+        lputv %timePlacement.22 %tmp.928;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 174 8 ]
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_174_8_if_stmt:
+        %tmp.930 = getv ? :isAwake;
+        bf %tmp.930 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_174_8_if_false;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_174_8_if_true:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_174_20_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 175 12 ]
+        %tmp.931 = lgetv %dc;
+        %tmp.932 = getv function %tmp.931 :setColor;
+        %tmp.933 = getm $.Toybox.Graphics;
+        %tmp.934 = getv %tmp.933 :COLOR_WHITE;
+        %tmp.935 = getm $.Toybox.Graphics;
+        %tmp.936 = getv %tmp.935 :COLOR_TRANSPARENT;
+        invoke %tmp.931 %tmp.932(%tmp.934, %tmp.936);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 176 12 ]
+        %tmp.937 = lgetv %dc;
+        %tmp.938 = getv function %tmp.937 :drawText;
+        %tmp.939 = self;
+        %tmp.940 = getv function %tmp.939 :adaptPx;
+        %tmp.941 = 58;
+        %tmp.942 = invoke %tmp.939 %tmp.940(%tmp.941);
+        %tmp.943 = self;
+        %tmp.944 = getv function %tmp.943 :adaptPx;
+        %tmp.945 = 72;
+        %tmp.946 = invoke %tmp.943 %tmp.944(%tmp.945);
+        %tmp.948 = getv ? :digitalFont;
+        %tmp.949 = lgetv %clockTime.1;
+        %tmp.950 = getv %tmp.949 :hour;
+        %tmp.951 = ":";
+        %tmp.952 = add %tmp.950 %tmp.951;
+        %tmp.953 = getm $.Toybox.Graphics;
+        %tmp.954 = getv %tmp.953 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.937 %tmp.938(%tmp.942, %tmp.946, %tmp.948, %tmp.952, %tmp.954);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 177 12 ]
+        %tmp.955 = lgetv %dc;
+        %tmp.956 = getv function %tmp.955 :drawText;
+        %tmp.957 = self;
+        %tmp.958 = getv function %tmp.957 :adaptPx;
+        %tmp.959 = 115;
+        %tmp.960 = invoke %tmp.957 %tmp.958(%tmp.959);
+        %tmp.961 = self;
+        %tmp.962 = getv function %tmp.961 :adaptPx;
+        %tmp.963 = 72;
+        %tmp.964 = invoke %tmp.961 %tmp.962(%tmp.963);
+        %tmp.966 = getv ? :digitalFont;
+        %tmp.967 = lgetv %clockTime.1;
+        %tmp.968 = getv %tmp.967 :min;
+        %tmp.969 = getv function %tmp.968 :format;
+        %tmp.970 = "%02d";
+        %tmp.971 = invoke %tmp.968 %tmp.969(%tmp.970);
+        %tmp.972 = ":";
+        %tmp.973 = add %tmp.971 %tmp.972;
+        %tmp.974 = getm $.Toybox.Graphics;
+        %tmp.975 = getv %tmp.974 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.955 %tmp.956(%tmp.960, %tmp.964, %tmp.966, %tmp.973, %tmp.975);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 178 12 ]
+        %tmp.976 = lgetv %dc;
+        %tmp.977 = getv function %tmp.976 :drawText;
+        %tmp.978 = self;
+        %tmp.979 = getv function %tmp.978 :adaptPx;
+        %tmp.980 = 165;
+        %tmp.981 = invoke %tmp.978 %tmp.979(%tmp.980);
+        %tmp.982 = self;
+        %tmp.983 = getv function %tmp.982 :adaptPx;
+        %tmp.984 = 72;
+        %tmp.985 = invoke %tmp.982 %tmp.983(%tmp.984);
+        %tmp.987 = getv ? :digitalFont;
+        %tmp.988 = lgetv %clockTime.1;
+        %tmp.989 = getv %tmp.988 :sec;
+        %tmp.990 = getv function %tmp.989 :format;
+        %tmp.991 = "%02d";
+        %tmp.992 = invoke %tmp.989 %tmp.990(%tmp.991);
+        %tmp.993 = getm $.Toybox.Graphics;
+        %tmp.994 = getv %tmp.993 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.976 %tmp.977(%tmp.981, %tmp.985, %tmp.987, %tmp.992, %tmp.994);
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_174_20_stop:
+        goto @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_174_8_if_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_174_8_if_false:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_180_13_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 181 12 ]
+        %tmp.995 = lgetv %dc;
+        %tmp.996 = getv function %tmp.995 :setColor;
+        %tmp.997 = getm $.Toybox.Graphics;
+        %tmp.998 = getv %tmp.997 :COLOR_WHITE;
+        %tmp.999 = getm $.Toybox.Graphics;
+        %tmp.1000 = getv %tmp.999 :COLOR_TRANSPARENT;
+        invoke %tmp.995 %tmp.996(%tmp.998, %tmp.1000);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 182 12 ]
+        %tmp.1001 = lgetv %dc;
+        %tmp.1002 = getv function %tmp.1001 :drawText;
+        %tmp.1003 = self;
+        %tmp.1004 = getv function %tmp.1003 :adaptPx;
+        %tmp.1005 = 80;
+        %tmp.1006 = invoke %tmp.1003 %tmp.1004(%tmp.1005);
+        %tmp.1007 = self;
+        %tmp.1008 = getv function %tmp.1007 :adaptPx;
+        %tmp.1009 = 72;
+        %tmp.1010 = invoke %tmp.1007 %tmp.1008(%tmp.1009);
+        %tmp.1012 = getv ? :digitalFont;
+        %tmp.1013 = lgetv %clockTime.1;
+        %tmp.1014 = getv %tmp.1013 :hour;
+        %tmp.1015 = ":";
+        %tmp.1016 = add %tmp.1014 %tmp.1015;
+        %tmp.1017 = getm $.Toybox.Graphics;
+        %tmp.1018 = getv %tmp.1017 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.1001 %tmp.1002(%tmp.1006, %tmp.1010, %tmp.1012, %tmp.1016, %tmp.1018);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 183 12 ]
+        %tmp.1019 = lgetv %dc;
+        %tmp.1020 = getv function %tmp.1019 :drawText;
+        %tmp.1021 = self;
+        %tmp.1022 = getv function %tmp.1021 :adaptPx;
+        %tmp.1023 = 130;
+        %tmp.1024 = invoke %tmp.1021 %tmp.1022(%tmp.1023);
+        %tmp.1025 = self;
+        %tmp.1026 = getv function %tmp.1025 :adaptPx;
+        %tmp.1027 = 72;
+        %tmp.1028 = invoke %tmp.1025 %tmp.1026(%tmp.1027);
+        %tmp.1030 = getv ? :digitalFont;
+        %tmp.1031 = lgetv %clockTime.1;
+        %tmp.1032 = getv %tmp.1031 :min;
+        %tmp.1033 = getv function %tmp.1032 :format;
+        %tmp.1034 = "%02d";
+        %tmp.1035 = invoke %tmp.1032 %tmp.1033(%tmp.1034);
+        %tmp.1036 = getm $.Toybox.Graphics;
+        %tmp.1037 = getv %tmp.1036 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.1019 %tmp.1020(%tmp.1024, %tmp.1028, %tmp.1030, %tmp.1035, %tmp.1037);
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_180_13_stop:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_174_8_if_end:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_39_40_stop:
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 190; ]
+    function onHide() as Void {
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 194; ]
+    function onExitSleep() as Void {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_194_35_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 195 8 ]
+        %tmp.1 = true;
+        putv self :isAwake %tmp.1;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_194_35_stop:
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 199; ]
+    function onEnterSleep() as Void {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_199_36_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 200 8 ]
+        %tmp.1 = false;
+        putv self :isAwake %tmp.1;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_199_36_stop:
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 203; ]
+    function drawSlantedSeparator(dc as Dc, startX as Number, startY as Number, descente as Number, widthPreDecline as Number, widthPostDecline as Number, interLineDist as Number) as Void {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_203_187_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 204 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :drawLine;
+        %tmp.4 = lgetv %startX;
+        %tmp.6 = lgetv %startY;
+        %tmp.8 = lgetv %widthPreDecline;
+        %tmp.10 = lgetv %startY;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6, %tmp.8, %tmp.10);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 205 8 ]
+        %tmp.11 = lgetv %dc;
+        %tmp.12 = getv function %tmp.11 :drawLine;
+        %tmp.14 = lgetv %startX;
+        %tmp.16 = lgetv %startY;
+        %tmp.18 = lgetv %interLineDist;
+        %tmp.19 = add %tmp.16 %tmp.18;
+        %tmp.21 = lgetv %widthPreDecline;
+        %tmp.23 = lgetv %startY;
+        %tmp.25 = lgetv %interLineDist;
+        %tmp.26 = add %tmp.23 %tmp.25;
+        invoke %tmp.11 %tmp.12(%tmp.14, %tmp.19, %tmp.21, %tmp.26);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 206 8 ]
+        %tmp.27 = lgetv %dc;
+        %tmp.28 = getv function %tmp.27 :drawLine;
+        %tmp.30 = lgetv %widthPreDecline;
+        %tmp.32 = lgetv %startY;
+        %tmp.34 = lgetv %widthPreDecline;
+        %tmp.36 = lgetv %descente;
+        %tmp.37 = add %tmp.34 %tmp.36;
+        %tmp.39 = lgetv %startY;
+        %tmp.41 = lgetv %descente;
+        %tmp.42 = add %tmp.39 %tmp.41;
+        invoke %tmp.27 %tmp.28(%tmp.30, %tmp.32, %tmp.37, %tmp.42);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 207 8 ]
+        %tmp.43 = lgetv %dc;
+        %tmp.44 = getv function %tmp.43 :drawLine;
+        %tmp.46 = lgetv %widthPreDecline;
+        %tmp.48 = lgetv %startY;
+        %tmp.50 = lgetv %interLineDist;
+        %tmp.51 = add %tmp.48 %tmp.50;
+        %tmp.52 = 1;
+        %tmp.53 = add %tmp.51 %tmp.52;
+        %tmp.55 = lgetv %widthPreDecline;
+        %tmp.57 = lgetv %descente;
+        %tmp.58 = add %tmp.55 %tmp.57;
+        %tmp.60 = lgetv %startY;
+        %tmp.62 = lgetv %descente;
+        %tmp.63 = add %tmp.60 %tmp.62;
+        %tmp.65 = lgetv %interLineDist;
+        %tmp.66 = add %tmp.63 %tmp.65;
+        %tmp.67 = 1;
+        %tmp.68 = add %tmp.66 %tmp.67;
+        invoke %tmp.43 %tmp.44(%tmp.46, %tmp.53, %tmp.58, %tmp.68);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 208 8 ]
+        %tmp.69 = lgetv %dc;
+        %tmp.70 = getv function %tmp.69 :drawLine;
+        %tmp.72 = lgetv %widthPreDecline;
+        %tmp.74 = lgetv %descente;
+        %tmp.75 = add %tmp.72 %tmp.74;
+        %tmp.77 = lgetv %startY;
+        %tmp.79 = lgetv %descente;
+        %tmp.80 = add %tmp.77 %tmp.79;
+        %tmp.82 = lgetv %widthPreDecline;
+        %tmp.84 = lgetv %descente;
+        %tmp.85 = add %tmp.82 %tmp.84;
+        %tmp.87 = lgetv %widthPostDecline;
+        %tmp.88 = add %tmp.85 %tmp.87;
+        %tmp.90 = lgetv %startY;
+        %tmp.92 = lgetv %descente;
+        %tmp.93 = add %tmp.90 %tmp.92;
+        invoke %tmp.69 %tmp.70(%tmp.75, %tmp.80, %tmp.88, %tmp.93);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 209 8 ]
+        %tmp.94 = lgetv %dc;
+        %tmp.95 = getv function %tmp.94 :drawLine;
+        %tmp.97 = lgetv %widthPreDecline;
+        %tmp.99 = lgetv %descente;
+        %tmp.100 = add %tmp.97 %tmp.99;
+        %tmp.102 = lgetv %startY;
+        %tmp.104 = lgetv %descente;
+        %tmp.105 = add %tmp.102 %tmp.104;
+        %tmp.107 = lgetv %interLineDist;
+        %tmp.108 = add %tmp.105 %tmp.107;
+        %tmp.110 = lgetv %widthPreDecline;
+        %tmp.112 = lgetv %descente;
+        %tmp.113 = add %tmp.110 %tmp.112;
+        %tmp.115 = lgetv %widthPostDecline;
+        %tmp.116 = add %tmp.113 %tmp.115;
+        %tmp.118 = lgetv %startY;
+        %tmp.120 = lgetv %descente;
+        %tmp.121 = add %tmp.118 %tmp.120;
+        %tmp.123 = lgetv %interLineDist;
+        %tmp.124 = add %tmp.121 %tmp.123;
+        invoke %tmp.94 %tmp.95(%tmp.100, %tmp.108, %tmp.116, %tmp.124);
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_203_187_stop:
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 212; ]
+    function drawTexturedRect(dc as Dc, x as Number, y as Number, width as Number, height as Number, density as Float, straight as Boolean) as Void {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_212_147_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 216 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_212_147_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_212_147_stop" ]
+        %offset.1 = local;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 217 8 ]
+        %tmp.2 = getv ? :Math;
+        %tmp.3 = getv function %tmp.2 :round;
+        %tmp.4 = 10;
+        %tmp.5 = 1;
+        %tmp.7 = lgetv %density;
+        %tmp.8 = sub %tmp.5 %tmp.7;
+        %tmp.9 = mul %tmp.4 %tmp.8;
+        %tmp.10 = invoke %tmp.2 %tmp.3(%tmp.9);
+        lputv %density %tmp.10;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 218 8 ]
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_218_8_if_stmt:
+        %tmp.12 = lgetv %density;
+        %tmp.13 = 2;
+        %tmp.14 = lt %tmp.12 %tmp.13;
+        bf %tmp.14 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_218_8_if_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_218_8_if_true:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_218_21_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 218 22 ]
+        %tmp.15 = 2;
+        lputv %density %tmp.15;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_218_21_stop:
+        goto @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_218_8_if_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_218_8_if_end:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 219 8 ]
+        for @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_8_for_test @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_8_for_incr @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_8_for_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_8_for_init:
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_8_for_begin" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_8_for_end" ]
+        %i.2 = local;
+        %tmp.17 = lgetv %x;
+        lputv %i.2 %tmp.17;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_8_for_test:
+        %tmp.19 = lgetv %i.2;
+        %tmp.21 = lgetv %x;
+        %tmp.23 = lgetv %width;
+        %tmp.24 = add %tmp.21 %tmp.23;
+        %tmp.25 = lt %tmp.19 %tmp.24;
+        bf %tmp.25 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_8_for_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_8_for_begin:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_41_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 220 12 ]
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_12_if_stmt:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_15_begin:
+        %tmp.27 = lgetv %straight;
+        %tmp.28 = not %tmp.27;
+        %tmp.29 = dup %tmp.28;
+        bf %tmp.29 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_28_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_28_true:
+        %tmp.30 = lgetv %i.2;
+        %tmp.31 = getv function %tmp.30 :toLong;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = 2;
+        %tmp.34 = mod %tmp.32 %tmp.33;
+        %tmp.35 = 0;
+        %tmp.36 = eq %tmp.34 %tmp.35;
+        %tmp.37 = and %tmp.28 %tmp.36;
+        push %tmp.37;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_28_end:
+        %tmp.38 = phi [%tmp.29 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_15_begin] [%tmp.37 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_28_true] [%tmp.38 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_28_end];
+        bf %tmp.38 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_12_if_false;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_12_if_true:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_44_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 221 16 ]
+        %tmp.40 = getv ? :Math;
+        %tmp.41 = getv function %tmp.40 :round;
+        %tmp.43 = lgetv %density;
+        %tmp.44 = 2;
+        %tmp.45 = div %tmp.43 %tmp.44;
+        %tmp.46 = invoke %tmp.40 %tmp.41(%tmp.45);
+        lputv %offset.1 %tmp.46;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_44_stop:
+        goto @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_12_if_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_12_if_false:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_223_16_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 223 17 ]
+        %tmp.47 = 0;
+        lputv %offset.1 %tmp.47;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_223_16_stop:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_220_12_if_end:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 224 12 ]
+        for @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_12_for_test @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_12_for_incr @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_12_for_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_12_for_init:
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_12_for_begin" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_12_for_end" ]
+        %j.3 = local;
+        %tmp.49 = lgetv %y;
+        %tmp.51 = lgetv %offset.1;
+        %tmp.52 = add %tmp.49 %tmp.51;
+        lputv %j.3 %tmp.52;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_12_for_test:
+        %tmp.54 = lgetv %j.3;
+        %tmp.56 = lgetv %y;
+        %tmp.58 = lgetv %height;
+        %tmp.59 = add %tmp.56 %tmp.58;
+        %tmp.60 = lt %tmp.54 %tmp.59;
+        bf %tmp.60 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_12_for_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_12_for_begin:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_53_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 225 16 ]
+        %tmp.61 = lgetv %dc;
+        %tmp.62 = getv function %tmp.61 :drawPoint;
+        %tmp.64 = lgetv %i.2;
+        %tmp.66 = lgetv %j.3;
+        invoke %tmp.61 %tmp.62(%tmp.64, %tmp.66);
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_53_stop:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_12_for_incr:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 224 ]
+        %tmp.67 = lgetv %j.3;
+        %tmp.69 = lgetv %density;
+        %tmp.70 = add %tmp.67 %tmp.69;
+        lputv %j.3 %tmp.70;
+        goto @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_12_for_test;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_224_12_for_end:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_41_stop:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_8_for_incr:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 219 ]
+        %tmp.71 = lgetv %i.2;
+        %tmp.73 = lgetv %density;
+        %tmp.74 = add %tmp.71 %tmp.73;
+        lputv %i.2 %tmp.74;
+        goto @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_8_for_test;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_219_8_for_end:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_212_147_stop:
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 230; ]
+    function drawParallelsPlanet(dc as Dc, centerX as Integer, centerY as Integer, radius as Integer, light as Boolean) as Void {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_230_127_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 231 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_230_127_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_230_127_stop" ]
+        %mainColor.1 = local;
+        %tmp.1 = getm $.Toybox.Graphics;
+        %tmp.2 = getv %tmp.1 :COLOR_BLACK;
+        lputv %mainColor.1 %tmp.2;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 232 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_230_127_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_230_127_stop" ]
+        %secondColor.2 = local;
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
+        lputv %secondColor.2 %tmp.4;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 233 8 ]
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_233_8_if_stmt:
+        %tmp.6 = lgetv %light;
+        bf %tmp.6 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_233_8_if_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_233_8_if_true:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_233_17_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 234 12 ]
+        %tmp.7 = getm $.Toybox.Graphics;
+        %tmp.8 = getv %tmp.7 :COLOR_WHITE;
+        lputv %mainColor.1 %tmp.8;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 235 12 ]
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :COLOR_BLACK;
+        lputv %secondColor.2 %tmp.10;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_233_17_stop:
+        goto @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_233_8_if_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_233_8_if_end:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 238 8 ]
+        %tmp.11 = lgetv %dc;
+        %tmp.12 = getv function %tmp.11 :setColor;
+        %tmp.14 = lgetv %mainColor.1;
+        %tmp.16 = lgetv %mainColor.1;
+        invoke %tmp.11 %tmp.12(%tmp.14, %tmp.16);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 239 8 ]
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :fillCircle;
+        %tmp.20 = lgetv %centerX;
+        %tmp.22 = lgetv %centerY;
+        %tmp.24 = lgetv %radius;
+        invoke %tmp.17 %tmp.18(%tmp.20, %tmp.22, %tmp.24);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 240 8 ]
+        %tmp.25 = lgetv %dc;
+        %tmp.26 = getv function %tmp.25 :setColor;
+        %tmp.28 = lgetv %secondColor.2;
+        %tmp.29 = getm $.Toybox.Graphics;
+        %tmp.30 = getv %tmp.29 :COLOR_TRANSPARENT;
+        invoke %tmp.25 %tmp.26(%tmp.28, %tmp.30);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 241 8 ]
+        %tmp.31 = lgetv %dc;
+        %tmp.32 = getv function %tmp.31 :setPenWidth;
+        %tmp.33 = 2;
+        invoke %tmp.31 %tmp.32(%tmp.33);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 242 8 ]
+        %tmp.34 = lgetv %dc;
+        %tmp.35 = getv function %tmp.34 :drawBitmap;
+        %tmp.36 = self;
+        %tmp.37 = getv function %tmp.36 :adaptPx;
+        %tmp.38 = 112;
+        %tmp.39 = invoke %tmp.36 %tmp.37(%tmp.38);
+        %tmp.40 = self;
+        %tmp.41 = getv function %tmp.40 :adaptPx;
+        %tmp.42 = 0;
+        %tmp.43 = invoke %tmp.40 %tmp.41(%tmp.42);
+        %tmp.45 = getv ? :globe_grid;
+        invoke %tmp.34 %tmp.35(%tmp.39, %tmp.43, %tmp.45);
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_230_127_stop:
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 245; ]
+    function adaptPx(num as Number) as Integer {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_245_46_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 247 8 ]
+        %tmp.2 = getv ? :Math;
+        %tmp.3 = getv function %tmp.2 :round;
+        %tmp.5 = getv ? :screenSize;
+        %tmp.7 = lgetv %num;
+        %tmp.8 = 176.0;
+        %tmp.9 = div %tmp.7 %tmp.8;
+        %tmp.10 = mul %tmp.5 %tmp.9;
+        %tmp.11 = invoke %tmp.2 %tmp.3(%tmp.10);
+        ret %tmp.11;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_245_46_stop:
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 249; ]
+    function textBox(dc as Dc, posX as Integer, posY as Integer, width as Integer, height as Integer, text as String, light as Boolean) as Void {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_249_143_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 250 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_249_143_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_249_143_stop" ]
+        %mainColor.1 = local;
+        %tmp.1 = getm $.Toybox.Graphics;
+        %tmp.2 = getv %tmp.1 :COLOR_BLACK;
+        lputv %mainColor.1 %tmp.2;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 251 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_249_143_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_249_143_stop" ]
+        %secondColor.2 = local;
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
+        lputv %secondColor.2 %tmp.4;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 252 8 ]
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_252_8_if_stmt:
+        %tmp.6 = lgetv %light;
+        bf %tmp.6 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_252_8_if_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_252_8_if_true:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_252_17_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 253 12 ]
+        %tmp.7 = getm $.Toybox.Graphics;
+        %tmp.8 = getv %tmp.7 :COLOR_WHITE;
+        lputv %mainColor.1 %tmp.8;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 254 12 ]
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :COLOR_BLACK;
+        lputv %secondColor.2 %tmp.10;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_252_17_stop:
+        goto @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_252_8_if_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_252_8_if_end:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 256 8 ]
+        %tmp.11 = lgetv %dc;
+        %tmp.12 = getv function %tmp.11 :setColor;
+        %tmp.14 = lgetv %mainColor.1;
+        %tmp.16 = lgetv %mainColor.1;
+        invoke %tmp.11 %tmp.12(%tmp.14, %tmp.16);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 257 8 ]
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :fillRectangle;
+        %tmp.20 = lgetv %posX;
+        %tmp.22 = lgetv %posY;
+        %tmp.24 = lgetv %width;
+        %tmp.26 = lgetv %height;
+        invoke %tmp.17 %tmp.18(%tmp.20, %tmp.22, %tmp.24, %tmp.26);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 258 8 ]
+        %tmp.27 = lgetv %dc;
+        %tmp.28 = getv function %tmp.27 :setColor;
+        %tmp.30 = lgetv %secondColor.2;
+        %tmp.32 = lgetv %secondColor.2;
+        invoke %tmp.27 %tmp.28(%tmp.30, %tmp.32);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 259 8 ]
+        %tmp.33 = lgetv %dc;
+        %tmp.34 = getv function %tmp.33 :setPenWidth;
+        %tmp.35 = 1;
+        invoke %tmp.33 %tmp.34(%tmp.35);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 260 8 ]
+        %tmp.36 = lgetv %dc;
+        %tmp.37 = getv function %tmp.36 :drawRectangle;
+        %tmp.39 = lgetv %posX;
+        %tmp.40 = 1;
+        %tmp.41 = add %tmp.39 %tmp.40;
+        %tmp.43 = lgetv %posY;
+        %tmp.44 = 1;
+        %tmp.45 = add %tmp.43 %tmp.44;
+        %tmp.47 = lgetv %width;
+        %tmp.48 = 2;
+        %tmp.49 = sub %tmp.47 %tmp.48;
+        %tmp.51 = lgetv %height;
+        %tmp.52 = 2;
+        %tmp.53 = sub %tmp.51 %tmp.52;
+        invoke %tmp.36 %tmp.37(%tmp.41, %tmp.45, %tmp.49, %tmp.53);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 261 8 ]
+        %tmp.54 = lgetv %dc;
+        %tmp.55 = getv function %tmp.54 :setColor;
+        %tmp.57 = lgetv %secondColor.2;
+        %tmp.58 = getm $.Toybox.Graphics;
+        %tmp.59 = getv %tmp.58 :COLOR_TRANSPARENT;
+        invoke %tmp.54 %tmp.55(%tmp.57, %tmp.59);
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 262 8 ]
+        %tmp.60 = lgetv %dc;
+        %tmp.61 = getv function %tmp.60 :drawText;
+        %tmp.63 = lgetv %posX;
+        %tmp.64 = 1;
+        %tmp.65 = add %tmp.63 %tmp.64;
+        %tmp.67 = lgetv %posY;
+        %tmp.68 = 3;
+        %tmp.69 = sub %tmp.67 %tmp.68;
+        %tmp.70 = getm $.Toybox.Graphics;
+        %tmp.71 = getv %tmp.70 :FONT_SYSTEM_XTINY;
+        %tmp.73 = lgetv %text;
+        %tmp.74 = getm $.Toybox.Graphics;
+        %tmp.75 = getv %tmp.74 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.60 %tmp.61(%tmp.65, %tmp.69, %tmp.71, %tmp.73, %tmp.75);
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_249_143_stop:
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 265; ]
+    function fullCustomDate() as String {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_265_39_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 266 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_265_39_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_265_39_stop" ]
+        %today.1 = local;
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        %tmp.2 = getv function %tmp.1 :info;
+        %tmp.4 = getv ? :Time;
+        %tmp.5 = getv function %tmp.4 :now;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.8 = getv ? :Time;
+        %tmp.9 = getv %tmp.8 :FORMAT_MEDIUM;
+        %tmp.10 = invoke %tmp.1 %tmp.2(%tmp.6, %tmp.9);
+        lputv %today.1 %tmp.10;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 267 8 ]
+        %tmp.11 = getm $.Toybox.Lang;
+        %tmp.12 = getv function %tmp.11 :format;
+        %tmp.13 = "$1$ $2$.$3$ $4$";
+        %tmp.14 = newa 4;
+        %tmp.15 = lgetv %today.1;
+        %tmp.16 = getv %tmp.15 :month;
+        %tmp.17 = getv function %tmp.16 :substring;
+        %tmp.18 = 0;
+        %tmp.19 = 2;
+        %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.18, %tmp.19);
+        %tmp.21 = dup %tmp.14;
+        %tmp.22 = aputv %tmp.21 0 %tmp.20;
+        %tmp.23 = lgetv %today.1;
+        %tmp.24 = getv %tmp.23 :day_of_week;
+        %tmp.25 = getv function %tmp.24 :substring;
+        %tmp.26 = 0;
+        %tmp.27 = 2;
+        %tmp.28 = invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27);
+        %tmp.29 = dup %tmp.22;
+        %tmp.30 = aputv %tmp.29 1 %tmp.28;
+        %tmp.31 = lgetv %today.1;
+        %tmp.32 = getv %tmp.31 :day;
+        %tmp.33 = dup %tmp.30;
+        %tmp.34 = aputv %tmp.33 2 %tmp.32;
+        %tmp.35 = lgetv %today.1;
+        %tmp.36 = getv %tmp.35 :year;
+        %tmp.37 = getv function %tmp.36 :toString;
+        %tmp.38 = invoke %tmp.36 %tmp.37();
+        %tmp.39 = getv function %tmp.38 :substring;
+        %tmp.40 = 2;
+        %tmp.41 = 4;
+        %tmp.42 = invoke %tmp.38 %tmp.39(%tmp.40, %tmp.41);
+        %tmp.43 = dup %tmp.34;
+        %tmp.44 = aputv %tmp.43 3 %tmp.42;
+        %tmp.45 = invoke %tmp.11 %tmp.12(%tmp.13, %tmp.44);
+        ret %tmp.45;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_265_39_stop:
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 270; ]
+    function drawPolygon(dc as Dc, points as Array<Array<Number>>) as Void {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_270_74_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 271 8 ]
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_270_74_start" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_270_74_stop" ]
+        %nextIndex.1 = local;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 272 8 ]
+        for @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_8_for_test @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_8_for_incr @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_8_for_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_8_for_init:
+        [ "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_8_for_begin" "C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_8_for_end" ]
+        %i.2 = local;
+        %tmp.1 = 0;
+        lputv %i.2 %tmp.1;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_8_for_test:
+        %tmp.3 = lgetv %i.2;
+        %tmp.4 = lgetv %points;
+        %tmp.5 = getv function %tmp.4 :size;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = lt %tmp.3 %tmp.6;
+        bf %tmp.7 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_8_for_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_8_for_begin:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_42_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 273 12 ]
+        %tmp.9 = getv ? :Math;
+        %tmp.10 = getv function %tmp.9 :round;
+        %tmp.12 = lgetv %i.2;
+        %tmp.13 = 1;
+        %tmp.14 = add %tmp.12 %tmp.13;
+        %tmp.15 = lgetv %points;
+        %tmp.16 = getv function %tmp.15 :size;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        %tmp.18 = mod %tmp.14 %tmp.17;
+        %tmp.19 = invoke %tmp.9 %tmp.10(%tmp.18);
+        %tmp.20 = as %tmp.19 Number;
+        lputv %nextIndex.1 %tmp.20;
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 274 12 ]
+        %tmp.21 = lgetv %dc;
+        %tmp.22 = getv function %tmp.21 :drawLine;
+        %tmp.24 = lgetv %points;
+        %tmp.26 = lgetv %i.2;
+        %tmp.27 = agetv %tmp.24 %tmp.26;
+        %tmp.28 = 0;
+        %tmp.29 = agetv %tmp.27 %tmp.28;
+        %tmp.31 = lgetv %points;
+        %tmp.33 = lgetv %i.2;
+        %tmp.34 = agetv %tmp.31 %tmp.33;
+        %tmp.35 = 1;
+        %tmp.36 = agetv %tmp.34 %tmp.35;
+        %tmp.38 = lgetv %points;
+        %tmp.40 = lgetv %nextIndex.1;
+        %tmp.41 = agetv %tmp.38 %tmp.40;
+        %tmp.42 = 0;
+        %tmp.43 = agetv %tmp.41 %tmp.42;
+        %tmp.45 = lgetv %points;
+        %tmp.47 = lgetv %nextIndex.1;
+        %tmp.48 = agetv %tmp.45 %tmp.47;
+        %tmp.49 = 1;
+        %tmp.50 = agetv %tmp.48 %tmp.49;
+        invoke %tmp.21 %tmp.22(%tmp.29, %tmp.36, %tmp.43, %tmp.50);
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_42_stop:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_8_for_incr:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 272 ]
+        %tmp.53 = lgetv %i.2;
+        %tmp.54 = add %tmp.53 1;
+        lputv %i.2 %tmp.54;
+        goto @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_8_for_test;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_272_8_for_end:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_270_74_stop:
+    }
+    [ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 278; ]
+    function computeActivityInfo(info) {
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_278_39_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 279 4 ]
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_279_4_if_stmt:
+        %tmp.2 = lgetv %info;
+        %tmp.4 = const :currentHeartRate;
+        %tmp.5 = canhazplz %tmp.2 %tmp.4;
+        bf %tmp.5 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_279_4_if_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_279_4_if_true:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_279_36_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 280 8 ]
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_280_8_if_stmt:
+        %tmp.6 = lgetv %info;
+        %tmp.7 = as %tmp.6 { (interface { var currentHeartRate; }) };
+        %tmp.8 = getv %tmp.7 :currentHeartRate;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        bf %tmp.10 @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_280_8_if_false;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_280_8_if_true:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_280_43_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 281 12 ]
+        %tmp.11 = lgetv %info;
+        %tmp.12 = as %tmp.11 { (interface { var currentHeartRate; }) };
+        %tmp.13 = getv %tmp.12 :currentHeartRate;
+        putv self :hrValue %tmp.13;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_280_43_stop:
+        goto @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_280_8_if_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_280_8_if_false:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_282_15_start:
+[ "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc" 283 12 ]
+        %tmp.14 = 0.0f;
+        putv self :hrValue %tmp.14;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_282_15_stop:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_280_8_if_end:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_279_36_stop:
+        goto @C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_279_4_if_end;
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_279_4_if_end:
+C_1_Dossiers_de_Nicolas_Lignes_de_code_Garmin_Watch_Connect_IQ_Programs_RetroFace_source_RetroFaceView_mc_278_39_stop:
+    }
+}
+[ @file = "C:\1 Dossiers de Nicolas\Lignes de code\Garmin Watch Connect IQ Programs\RetroFace\source\RetroFaceView.mc"; @line = 1; ]
+<init> {
+}

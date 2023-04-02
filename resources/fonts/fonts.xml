@@ -1,0 +1,3 @@
+<fonts>
+    <font id="digitalFont" filename="digital_font.fnt" filter="0123456789,-:.;ABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
+</fonts>
