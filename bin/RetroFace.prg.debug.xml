@@ -5,63 +5,63 @@
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="1" lineNum="26" parent="globals" pc="268435460" symbol="getApp"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="1" lineNum="27" parent="globals" pc="268435470" symbol="getApp"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="2" lineNum="8" parent="globals/RetroFaceView" pc="268435486" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="3" lineNum="194" parent="globals/RetroFaceView" pc="268435505" symbol="onExitSleep"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="3" lineNum="195" parent="globals/RetroFaceView" pc="268435507" symbol="onExitSleep"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="249" parent="globals/RetroFaceView" pc="268435518" symbol="textBox"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="250" parent="globals/RetroFaceView" pc="268435522" symbol="textBox"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="251" parent="globals/RetroFaceView" pc="268435529" symbol="textBox"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="252" parent="globals/RetroFaceView" pc="268435536" symbol="textBox"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="253" parent="globals/RetroFaceView" pc="268435541" symbol="textBox"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="254" parent="globals/RetroFaceView" pc="268435548" symbol="textBox"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="256" parent="globals/RetroFaceView" pc="268435558" symbol="textBox"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="257" parent="globals/RetroFaceView" pc="268435574" symbol="textBox"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="258" parent="globals/RetroFaceView" pc="268435594" symbol="textBox"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="259" parent="globals/RetroFaceView" pc="268435610" symbol="textBox"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="260" parent="globals/RetroFaceView" pc="268435627" symbol="textBox"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="261" parent="globals/RetroFaceView" pc="268435671" symbol="textBox"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="262" parent="globals/RetroFaceView" pc="268435690" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="3" lineNum="196" parent="globals/RetroFaceView" pc="268435505" symbol="onExitSleep"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="3" lineNum="197" parent="globals/RetroFaceView" pc="268435507" symbol="onExitSleep"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="251" parent="globals/RetroFaceView" pc="268435518" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="252" parent="globals/RetroFaceView" pc="268435522" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="253" parent="globals/RetroFaceView" pc="268435529" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="254" parent="globals/RetroFaceView" pc="268435536" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="255" parent="globals/RetroFaceView" pc="268435541" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="256" parent="globals/RetroFaceView" pc="268435548" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="258" parent="globals/RetroFaceView" pc="268435558" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="259" parent="globals/RetroFaceView" pc="268435574" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="260" parent="globals/RetroFaceView" pc="268435594" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="261" parent="globals/RetroFaceView" pc="268435610" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="262" parent="globals/RetroFaceView" pc="268435627" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="263" parent="globals/RetroFaceView" pc="268435671" symbol="textBox"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="5" lineNum="264" parent="globals/RetroFaceView" pc="268435690" symbol="textBox"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="6" lineNum="25" parent="globals/RetroFaceView" pc="268435731" symbol="onLayout"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="6" lineNum="26" parent="globals/RetroFaceView" pc="268435733" symbol="onLayout"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="6" lineNum="27" parent="globals/RetroFaceView" pc="268435774" symbol="onLayout"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="6" lineNum="28" parent="globals/RetroFaceView" pc="268435821" symbol="onLayout"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="7" lineNum="245" parent="globals/RetroFaceView" pc="268435841" symbol="adaptPx"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="7" lineNum="247" parent="globals/RetroFaceView" pc="268435843" symbol="adaptPx"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="8" lineNum="278" parent="globals/RetroFaceView" pc="268435878" symbol="computeActivityInfo"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="8" lineNum="279" parent="globals/RetroFaceView" pc="268435880" symbol="computeActivityInfo"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="8" lineNum="280" parent="globals/RetroFaceView" pc="268435891" symbol="computeActivityInfo"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="8" lineNum="281" parent="globals/RetroFaceView" pc="268435904" symbol="computeActivityInfo"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="8" lineNum="283" parent="globals/RetroFaceView" pc="268435923" symbol="computeActivityInfo"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="203" parent="globals/RetroFaceView" pc="268435940" symbol="drawSlantedSeparator"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="204" parent="globals/RetroFaceView" pc="268435942" symbol="drawSlantedSeparator"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="205" parent="globals/RetroFaceView" pc="268435962" symbol="drawSlantedSeparator"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="206" parent="globals/RetroFaceView" pc="268435988" symbol="drawSlantedSeparator"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="207" parent="globals/RetroFaceView" pc="268436014" symbol="drawSlantedSeparator"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="208" parent="globals/RetroFaceView" pc="268436058" symbol="drawSlantedSeparator"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="209" parent="globals/RetroFaceView" pc="268436093" symbol="drawSlantedSeparator"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="10" lineNum="199" parent="globals/RetroFaceView" pc="268436135" symbol="onEnterSleep"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="10" lineNum="200" parent="globals/RetroFaceView" pc="268436137" symbol="onEnterSleep"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="212" parent="globals/RetroFaceView" pc="268436148" symbol="drawTexturedRect"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="216" parent="globals/RetroFaceView" pc="268436152" symbol="drawTexturedRect"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="217" parent="globals/RetroFaceView" pc="268436152" symbol="drawTexturedRect"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="218" parent="globals/RetroFaceView" pc="268436185" symbol="drawTexturedRect"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="218" parent="globals/RetroFaceView" pc="268436196" symbol="drawTexturedRect"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="219" parent="globals/RetroFaceView" pc="268436206" symbol="drawTexturedRect"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="220" parent="globals/RetroFaceView" pc="268436221" symbol="drawTexturedRect"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="221" parent="globals/RetroFaceView" pc="268436256" symbol="drawTexturedRect"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="223" parent="globals/RetroFaceView" pc="268436286" symbol="drawTexturedRect"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="224" parent="globals/RetroFaceView" pc="268436293" symbol="drawTexturedRect"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="225" parent="globals/RetroFaceView" pc="268436311" symbol="drawTexturedRect"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="230" parent="globals/RetroFaceView" pc="268436348" symbol="drawParallelsPlanet"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="231" parent="globals/RetroFaceView" pc="268436352" symbol="drawParallelsPlanet"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="232" parent="globals/RetroFaceView" pc="268436359" symbol="drawParallelsPlanet"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="233" parent="globals/RetroFaceView" pc="268436366" symbol="drawParallelsPlanet"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="234" parent="globals/RetroFaceView" pc="268436371" symbol="drawParallelsPlanet"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="235" parent="globals/RetroFaceView" pc="268436378" symbol="drawParallelsPlanet"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="238" parent="globals/RetroFaceView" pc="268436388" symbol="drawParallelsPlanet"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="239" parent="globals/RetroFaceView" pc="268436404" symbol="drawParallelsPlanet"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="240" parent="globals/RetroFaceView" pc="268436422" symbol="drawParallelsPlanet"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="241" parent="globals/RetroFaceView" pc="268436441" symbol="drawParallelsPlanet"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="242" parent="globals/RetroFaceView" pc="268436458" symbol="drawParallelsPlanet"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="7" lineNum="247" parent="globals/RetroFaceView" pc="268435841" symbol="adaptPx"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="7" lineNum="249" parent="globals/RetroFaceView" pc="268435843" symbol="adaptPx"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="8" lineNum="280" parent="globals/RetroFaceView" pc="268435878" symbol="computeActivityInfo"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="8" lineNum="281" parent="globals/RetroFaceView" pc="268435880" symbol="computeActivityInfo"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="8" lineNum="282" parent="globals/RetroFaceView" pc="268435891" symbol="computeActivityInfo"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="8" lineNum="283" parent="globals/RetroFaceView" pc="268435904" symbol="computeActivityInfo"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="8" lineNum="285" parent="globals/RetroFaceView" pc="268435923" symbol="computeActivityInfo"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="205" parent="globals/RetroFaceView" pc="268435940" symbol="drawSlantedSeparator"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="206" parent="globals/RetroFaceView" pc="268435942" symbol="drawSlantedSeparator"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="207" parent="globals/RetroFaceView" pc="268435962" symbol="drawSlantedSeparator"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="208" parent="globals/RetroFaceView" pc="268435988" symbol="drawSlantedSeparator"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="209" parent="globals/RetroFaceView" pc="268436014" symbol="drawSlantedSeparator"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="210" parent="globals/RetroFaceView" pc="268436058" symbol="drawSlantedSeparator"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="9" lineNum="211" parent="globals/RetroFaceView" pc="268436093" symbol="drawSlantedSeparator"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="10" lineNum="201" parent="globals/RetroFaceView" pc="268436135" symbol="onEnterSleep"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="10" lineNum="202" parent="globals/RetroFaceView" pc="268436137" symbol="onEnterSleep"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="214" parent="globals/RetroFaceView" pc="268436148" symbol="drawTexturedRect"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="218" parent="globals/RetroFaceView" pc="268436152" symbol="drawTexturedRect"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="219" parent="globals/RetroFaceView" pc="268436152" symbol="drawTexturedRect"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="220" parent="globals/RetroFaceView" pc="268436185" symbol="drawTexturedRect"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="220" parent="globals/RetroFaceView" pc="268436196" symbol="drawTexturedRect"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="221" parent="globals/RetroFaceView" pc="268436206" symbol="drawTexturedRect"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="222" parent="globals/RetroFaceView" pc="268436221" symbol="drawTexturedRect"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="223" parent="globals/RetroFaceView" pc="268436256" symbol="drawTexturedRect"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="225" parent="globals/RetroFaceView" pc="268436286" symbol="drawTexturedRect"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="226" parent="globals/RetroFaceView" pc="268436293" symbol="drawTexturedRect"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="11" lineNum="227" parent="globals/RetroFaceView" pc="268436311" symbol="drawTexturedRect"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="232" parent="globals/RetroFaceView" pc="268436348" symbol="drawParallelsPlanet"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="233" parent="globals/RetroFaceView" pc="268436352" symbol="drawParallelsPlanet"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="234" parent="globals/RetroFaceView" pc="268436359" symbol="drawParallelsPlanet"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="235" parent="globals/RetroFaceView" pc="268436366" symbol="drawParallelsPlanet"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="236" parent="globals/RetroFaceView" pc="268436371" symbol="drawParallelsPlanet"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="237" parent="globals/RetroFaceView" pc="268436378" symbol="drawParallelsPlanet"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="240" parent="globals/RetroFaceView" pc="268436388" symbol="drawParallelsPlanet"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="241" parent="globals/RetroFaceView" pc="268436404" symbol="drawParallelsPlanet"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="242" parent="globals/RetroFaceView" pc="268436422" symbol="drawParallelsPlanet"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="243" parent="globals/RetroFaceView" pc="268436441" symbol="drawParallelsPlanet"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="12" lineNum="244" parent="globals/RetroFaceView" pc="268436458" symbol="drawParallelsPlanet"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="13" lineNum="18" parent="globals/RetroFaceView" pc="268436511" symbol="initialize"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="13" lineNum="20" parent="globals/RetroFaceView" pc="268436513" symbol="initialize"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="13" lineNum="21" parent="globals/RetroFaceView" pc="268436531" symbol="initialize"/>
@@ -70,7 +70,7 @@
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="53" parent="globals/RetroFaceView" pc="268436600" symbol="onUpdate"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="55" parent="globals/RetroFaceView" pc="268436624" symbol="onUpdate"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="56" parent="globals/RetroFaceView" pc="268436646" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="57" parent="globals/RetroFaceView" pc="268436658" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="58" parent="globals/RetroFaceView" pc="268436658" symbol="onUpdate"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="59" parent="globals/RetroFaceView" pc="268436680" symbol="onUpdate"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="60" parent="globals/RetroFaceView" pc="268436697" symbol="onUpdate"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="61" parent="globals/RetroFaceView" pc="268436791" symbol="onUpdate"/>
@@ -80,82 +80,84 @@
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="65" parent="globals/RetroFaceView" pc="268437056" symbol="onUpdate"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="73" parent="globals/RetroFaceView" pc="268437548" symbol="onUpdate"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="76" parent="globals/RetroFaceView" pc="268437618" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="83" parent="globals/RetroFaceView" pc="268437715" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="84" parent="globals/RetroFaceView" pc="268437740" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="85" parent="globals/RetroFaceView" pc="268437765" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="86" parent="globals/RetroFaceView" pc="268437772" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="88" parent="globals/RetroFaceView" pc="268437797" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="89" parent="globals/RetroFaceView" pc="268437819" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="91" parent="globals/RetroFaceView" pc="268437888" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="92" parent="globals/RetroFaceView" pc="268437906" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="93" parent="globals/RetroFaceView" pc="268437924" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="94" parent="globals/RetroFaceView" pc="268437942" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="95" parent="globals/RetroFaceView" pc="268437960" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="96" parent="globals/RetroFaceView" pc="268437978" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="97" parent="globals/RetroFaceView" pc="268437985" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="99" parent="globals/RetroFaceView" pc="268437992" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="100" parent="globals/RetroFaceView" pc="268438007" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="101" parent="globals/RetroFaceView" pc="268438030" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="102" parent="globals/RetroFaceView" pc="268438052" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="103" parent="globals/RetroFaceView" pc="268438077" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="104" parent="globals/RetroFaceView" pc="268438099" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="107" parent="globals/RetroFaceView" pc="268438127" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="109" parent="globals/RetroFaceView" pc="268438152" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="110" parent="globals/RetroFaceView" pc="268438162" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="111" parent="globals/RetroFaceView" pc="268438169" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="117" parent="globals/RetroFaceView" pc="268438192" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="118" parent="globals/RetroFaceView" pc="268438214" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="124" parent="globals/RetroFaceView" pc="268438480" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="125" parent="globals/RetroFaceView" pc="268438502" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="77" parent="globals/RetroFaceView" pc="268437640" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="78" parent="globals/RetroFaceView" pc="268437657" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="85" parent="globals/RetroFaceView" pc="268437754" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="86" parent="globals/RetroFaceView" pc="268437779" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="87" parent="globals/RetroFaceView" pc="268437804" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="88" parent="globals/RetroFaceView" pc="268437811" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="90" parent="globals/RetroFaceView" pc="268437836" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="91" parent="globals/RetroFaceView" pc="268437858" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="93" parent="globals/RetroFaceView" pc="268437927" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="94" parent="globals/RetroFaceView" pc="268437945" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="95" parent="globals/RetroFaceView" pc="268437963" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="96" parent="globals/RetroFaceView" pc="268437981" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="97" parent="globals/RetroFaceView" pc="268437999" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="98" parent="globals/RetroFaceView" pc="268438017" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="99" parent="globals/RetroFaceView" pc="268438024" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="101" parent="globals/RetroFaceView" pc="268438031" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="102" parent="globals/RetroFaceView" pc="268438046" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="103" parent="globals/RetroFaceView" pc="268438069" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="104" parent="globals/RetroFaceView" pc="268438091" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="105" parent="globals/RetroFaceView" pc="268438116" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="106" parent="globals/RetroFaceView" pc="268438138" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="109" parent="globals/RetroFaceView" pc="268438166" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="111" parent="globals/RetroFaceView" pc="268438191" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="112" parent="globals/RetroFaceView" pc="268438201" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="113" parent="globals/RetroFaceView" pc="268438208" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="119" parent="globals/RetroFaceView" pc="268438231" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="120" parent="globals/RetroFaceView" pc="268438253" symbol="onUpdate"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="126" parent="globals/RetroFaceView" pc="268438519" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="132" parent="globals/RetroFaceView" pc="268438787" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="133" parent="globals/RetroFaceView" pc="268438816" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="134" parent="globals/RetroFaceView" pc="268438846" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="137" parent="globals/RetroFaceView" pc="268438902" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="138" parent="globals/RetroFaceView" pc="268438956" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="139" parent="globals/RetroFaceView" pc="268438978" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="141" parent="globals/RetroFaceView" pc="268439040" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="142" parent="globals/RetroFaceView" pc="268439058" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="143" parent="globals/RetroFaceView" pc="268439076" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="144" parent="globals/RetroFaceView" pc="268439094" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="145" parent="globals/RetroFaceView" pc="268439112" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="146" parent="globals/RetroFaceView" pc="268439134" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="152" parent="globals/RetroFaceView" pc="268439326" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="153" parent="globals/RetroFaceView" pc="268439348" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="127" parent="globals/RetroFaceView" pc="268438541" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="128" parent="globals/RetroFaceView" pc="268438558" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="134" parent="globals/RetroFaceView" pc="268438826" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="135" parent="globals/RetroFaceView" pc="268438855" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="136" parent="globals/RetroFaceView" pc="268438885" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="139" parent="globals/RetroFaceView" pc="268438941" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="140" parent="globals/RetroFaceView" pc="268438995" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="141" parent="globals/RetroFaceView" pc="268439017" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="143" parent="globals/RetroFaceView" pc="268439079" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="144" parent="globals/RetroFaceView" pc="268439097" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="145" parent="globals/RetroFaceView" pc="268439115" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="146" parent="globals/RetroFaceView" pc="268439133" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="147" parent="globals/RetroFaceView" pc="268439151" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="148" parent="globals/RetroFaceView" pc="268439173" symbol="onUpdate"/>
         <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="154" parent="globals/RetroFaceView" pc="268439365" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="160" parent="globals/RetroFaceView" pc="268439559" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="161" parent="globals/RetroFaceView" pc="268439608" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="162" parent="globals/RetroFaceView" pc="268439618" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="170" parent="globals/RetroFaceView" pc="268439810" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="171" parent="globals/RetroFaceView" pc="268439832" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="172" parent="globals/RetroFaceView" pc="268439835" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="174" parent="globals/RetroFaceView" pc="268439838" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="175" parent="globals/RetroFaceView" pc="268439849" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="176" parent="globals/RetroFaceView" pc="268439871" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="177" parent="globals/RetroFaceView" pc="268439942" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="178" parent="globals/RetroFaceView" pc="268440027" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="181" parent="globals/RetroFaceView" pc="268440109" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="182" parent="globals/RetroFaceView" pc="268440131" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="183" parent="globals/RetroFaceView" pc="268440202" symbol="onUpdate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="16" lineNum="270" parent="globals/RetroFaceView" pc="268440282" symbol="drawPolygon"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="16" lineNum="271" parent="globals/RetroFaceView" pc="268440286" symbol="drawPolygon"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="16" lineNum="272" parent="globals/RetroFaceView" pc="268440286" symbol="drawPolygon"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="16" lineNum="273" parent="globals/RetroFaceView" pc="268440310" symbol="drawPolygon"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="16" lineNum="274" parent="globals/RetroFaceView" pc="268440349" symbol="drawPolygon"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="17" lineNum="265" parent="globals/RetroFaceView" pc="268440419" symbol="fullCustomDate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="17" lineNum="266" parent="globals/RetroFaceView" pc="268440423" symbol="fullCustomDate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="17" lineNum="267" parent="globals/RetroFaceView" pc="268440462" symbol="fullCustomDate"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="18" lineNum="5" parent="globals/RetroFaceApp" pc="268440619" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="19" lineNum="12" parent="globals/RetroFaceApp" pc="268440638" symbol="onStart"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="20" lineNum="20" parent="globals/RetroFaceApp" pc="268440641" symbol="getInitialView"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="20" lineNum="21" parent="globals/RetroFaceApp" pc="268440643" symbol="getInitialView"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="21" lineNum="7" parent="globals/RetroFaceApp" pc="268440684" symbol="initialize"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="21" lineNum="8" parent="globals/RetroFaceApp" pc="268440686" symbol="initialize"/>
-        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="22" lineNum="16" parent="globals/RetroFaceApp" pc="268440705" symbol="onStop"/>
-        <entry filename="Rez.mc" id="23" lineNum="1" parent="globals/Rez" pc="268440708" symbol="&lt;init&gt;"/>
-        <entry filename="Rez.mc" id="24" lineNum="20" parent="globals/Rez/Layouts" pc="268440732" symbol="WatchFace"/>
-        <entry filename="Rez.mc" id="24" lineNum="22" parent="globals/Rez/Layouts" pc="268440744" symbol="WatchFace"/>
-        <entry filename="Rez.mc" id="24" lineNum="24" parent="globals/Rez/Layouts" pc="268440879" symbol="WatchFace"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="155" parent="globals/RetroFaceView" pc="268439387" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="156" parent="globals/RetroFaceView" pc="268439404" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="162" parent="globals/RetroFaceView" pc="268439598" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="163" parent="globals/RetroFaceView" pc="268439647" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="164" parent="globals/RetroFaceView" pc="268439657" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="172" parent="globals/RetroFaceView" pc="268439849" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="173" parent="globals/RetroFaceView" pc="268439871" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="174" parent="globals/RetroFaceView" pc="268439874" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="176" parent="globals/RetroFaceView" pc="268439877" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="177" parent="globals/RetroFaceView" pc="268439888" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="178" parent="globals/RetroFaceView" pc="268439910" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="179" parent="globals/RetroFaceView" pc="268439981" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="180" parent="globals/RetroFaceView" pc="268440066" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="183" parent="globals/RetroFaceView" pc="268440148" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="184" parent="globals/RetroFaceView" pc="268440170" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="15" lineNum="185" parent="globals/RetroFaceView" pc="268440241" symbol="onUpdate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="16" lineNum="272" parent="globals/RetroFaceView" pc="268440321" symbol="drawPolygon"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="16" lineNum="273" parent="globals/RetroFaceView" pc="268440325" symbol="drawPolygon"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="16" lineNum="274" parent="globals/RetroFaceView" pc="268440325" symbol="drawPolygon"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="16" lineNum="275" parent="globals/RetroFaceView" pc="268440349" symbol="drawPolygon"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="16" lineNum="276" parent="globals/RetroFaceView" pc="268440388" symbol="drawPolygon"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="17" lineNum="267" parent="globals/RetroFaceView" pc="268440458" symbol="fullCustomDate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="17" lineNum="268" parent="globals/RetroFaceView" pc="268440462" symbol="fullCustomDate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceView.mc" id="17" lineNum="269" parent="globals/RetroFaceView" pc="268440501" symbol="fullCustomDate"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="18" lineNum="5" parent="globals/RetroFaceApp" pc="268440658" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="19" lineNum="12" parent="globals/RetroFaceApp" pc="268440677" symbol="onStart"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="20" lineNum="20" parent="globals/RetroFaceApp" pc="268440680" symbol="getInitialView"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="20" lineNum="21" parent="globals/RetroFaceApp" pc="268440682" symbol="getInitialView"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="21" lineNum="7" parent="globals/RetroFaceApp" pc="268440723" symbol="initialize"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="21" lineNum="8" parent="globals/RetroFaceApp" pc="268440725" symbol="initialize"/>
+        <entry filename="C:\\1 Dossiers de Nicolas\\Lignes de code\\Garmin Watch Connect IQ Programs\\RetroFace\\source\\RetroFaceApp.mc" id="22" lineNum="16" parent="globals/RetroFaceApp" pc="268440744" symbol="onStop"/>
+        <entry filename="Rez.mc" id="23" lineNum="1" parent="globals/Rez" pc="268440747" symbol="&lt;init&gt;"/>
+        <entry filename="Rez.mc" id="24" lineNum="20" parent="globals/Rez/Layouts" pc="268440771" symbol="WatchFace"/>
+        <entry filename="Rez.mc" id="24" lineNum="22" parent="globals/Rez/Layouts" pc="268440783" symbol="WatchFace"/>
+        <entry filename="Rez.mc" id="24" lineNum="24" parent="globals/Rez/Layouts" pc="268440918" symbol="WatchFace"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
@@ -260,36 +262,36 @@
         <entry arg="true" endPc="268436510" name="light" stackId="5" startPc="268436348"/>
         <entry endPc="268436509" name="mainColor" stackId="6" startPc="268436352"/>
         <entry endPc="268436509" name="secondColor" stackId="7" startPc="268436352"/>
-        <entry arg="true" endPc="268440281" name="dc" stackId="1" startPc="268436579"/>
-        <entry endPc="268440280" name="clockTime" stackId="2" startPc="268436583"/>
-        <entry endPc="268440280" name="steps" stackId="3" startPc="268436583"/>
-        <entry endPc="268440280" name="stepGoal" stackId="4" startPc="268436583"/>
-        <entry endPc="268440280" name="stepGoalAchieved" stackId="5" startPc="268436583"/>
-        <entry endPc="268440280" name="stepAchievePercent" stackId="6" startPc="268436583"/>
-        <entry endPc="268440280" name="startX" stackId="7" startPc="268436583"/>
-        <entry endPc="268440280" name="startY" stackId="8" startPc="268436583"/>
-        <entry endPc="268440280" name="height" stackId="9" startPc="268436583"/>
-        <entry endPc="268440280" name="width" stackId="10" startPc="268436583"/>
-        <entry endPc="268440280" name="margin" stackId="11" startPc="268436583"/>
-        <entry endPc="268440280" name="numOfBars" stackId="12" startPc="268436583"/>
-        <entry endPc="268440280" name="fixedX" stackId="13" startPc="268436583"/>
-        <entry endPc="268438191" name="i" stackId="14" startPc="268438007"/>
-        <entry endPc="268440280" name="hrString" stackId="15" startPc="268436583"/>
-        <entry endPc="268440280" name="batteryLevel" stackId="16" startPc="268436583"/>
-        <entry endPc="268440280" name="battPolyHeight" stackId="17" startPc="268436583"/>
-        <entry endPc="268440280" name="battPolyInitialWidth" stackId="18" startPc="268436583"/>
-        <entry endPc="268440280" name="polyStartX" stackId="19" startPc="268436583"/>
-        <entry endPc="268440280" name="polyStartY" stackId="20" startPc="268436583"/>
-        <entry endPc="268440280" name="partialFill" stackId="21" startPc="268436583"/>
-        <entry endPc="268440280" name="timeString" stackId="22" startPc="268436583"/>
-        <entry endPc="268440280" name="timePlacement" stackId="23" startPc="268436583"/>
-        <entry arg="true" endPc="268440418" name="dc" stackId="1" startPc="268440282"/>
-        <entry arg="true" endPc="268440418" name="points" stackId="2" startPc="268440282"/>
-        <entry endPc="268440417" name="nextIndex" stackId="3" startPc="268440286"/>
-        <entry endPc="268440417" name="i" stackId="4" startPc="268440310"/>
-        <entry endPc="268440618" name="today" stackId="1" startPc="268440423"/>
-        <entry arg="true" endPc="268440895" name="dc" stackId="1" startPc="268440732"/>
-        <entry endPc="268440895" name="rez_cmp_local_text_TimeLabel" stackId="2" startPc="268440744"/>
+        <entry arg="true" endPc="268440320" name="dc" stackId="1" startPc="268436579"/>
+        <entry endPc="268440319" name="clockTime" stackId="2" startPc="268436583"/>
+        <entry endPc="268440319" name="steps" stackId="3" startPc="268436583"/>
+        <entry endPc="268440319" name="stepGoal" stackId="4" startPc="268436583"/>
+        <entry endPc="268440319" name="stepGoalAchieved" stackId="5" startPc="268436583"/>
+        <entry endPc="268440319" name="stepAchievePercent" stackId="6" startPc="268436583"/>
+        <entry endPc="268440319" name="startX" stackId="7" startPc="268436583"/>
+        <entry endPc="268440319" name="startY" stackId="8" startPc="268436583"/>
+        <entry endPc="268440319" name="height" stackId="9" startPc="268436583"/>
+        <entry endPc="268440319" name="width" stackId="10" startPc="268436583"/>
+        <entry endPc="268440319" name="margin" stackId="11" startPc="268436583"/>
+        <entry endPc="268440319" name="numOfBars" stackId="12" startPc="268436583"/>
+        <entry endPc="268440319" name="fixedX" stackId="13" startPc="268436583"/>
+        <entry endPc="268438230" name="i" stackId="14" startPc="268438046"/>
+        <entry endPc="268440319" name="hrString" stackId="15" startPc="268436583"/>
+        <entry endPc="268440319" name="batteryLevel" stackId="16" startPc="268436583"/>
+        <entry endPc="268440319" name="battPolyHeight" stackId="17" startPc="268436583"/>
+        <entry endPc="268440319" name="battPolyInitialWidth" stackId="18" startPc="268436583"/>
+        <entry endPc="268440319" name="polyStartX" stackId="19" startPc="268436583"/>
+        <entry endPc="268440319" name="polyStartY" stackId="20" startPc="268436583"/>
+        <entry endPc="268440319" name="partialFill" stackId="21" startPc="268436583"/>
+        <entry endPc="268440319" name="timeString" stackId="22" startPc="268436583"/>
+        <entry endPc="268440319" name="timePlacement" stackId="23" startPc="268436583"/>
+        <entry arg="true" endPc="268440457" name="dc" stackId="1" startPc="268440321"/>
+        <entry arg="true" endPc="268440457" name="points" stackId="2" startPc="268440321"/>
+        <entry endPc="268440456" name="nextIndex" stackId="3" startPc="268440325"/>
+        <entry endPc="268440456" name="i" stackId="4" startPc="268440349"/>
+        <entry endPc="268440657" name="today" stackId="1" startPc="268440462"/>
+        <entry arg="true" endPc="268440934" name="dc" stackId="1" startPc="268440771"/>
+        <entry endPc="268440934" name="rez_cmp_local_text_TimeLabel" stackId="2" startPc="268440783"/>
     </localVars>
     <annotations>
         <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
@@ -381,36 +383,36 @@
         <functionEntry accessMode="public" name="onHide" parent="RetroFaceView">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440281" name="onUpdate" parent="RetroFaceView" startPc="268436579">
+        <functionEntry accessMode="public" endPc="268440320" name="onUpdate" parent="RetroFaceView" startPc="268436579">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440418" name="drawPolygon" parent="RetroFaceView" startPc="268440282">
+        <functionEntry accessMode="public" endPc="268440457" name="drawPolygon" parent="RetroFaceView" startPc="268440321">
             <param id="dc"/>
             <param id="points"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440618" name="fullCustomDate" parent="RetroFaceView" startPc="268440419">
+        <functionEntry accessMode="public" endPc="268440657" name="fullCustomDate" parent="RetroFaceView" startPc="268440458">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440637" name="&lt;init&gt;" parent="RetroFaceApp" startPc="268440619">
+        <functionEntry accessMode="public" endPc="268440676" name="&lt;init&gt;" parent="RetroFaceApp" startPc="268440658">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440640" name="onStart" parent="RetroFaceApp" startPc="268440638">
+        <functionEntry accessMode="public" endPc="268440679" name="onStart" parent="RetroFaceApp" startPc="268440677">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440683" name="getInitialView" parent="RetroFaceApp" startPc="268440641">
+        <functionEntry accessMode="public" endPc="268440722" name="getInitialView" parent="RetroFaceApp" startPc="268440680">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440704" name="initialize" parent="RetroFaceApp" startPc="268440684">
+        <functionEntry accessMode="public" endPc="268440743" name="initialize" parent="RetroFaceApp" startPc="268440723">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440707" name="onStop" parent="RetroFaceApp" startPc="268440705">
+        <functionEntry accessMode="public" endPc="268440746" name="onStop" parent="RetroFaceApp" startPc="268440744">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440731" name="&lt;init&gt;" parent="Rez" startPc="268440708">
+        <functionEntry accessMode="public" endPc="268440770" name="&lt;init&gt;" parent="Rez" startPc="268440747">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
@@ -431,7 +433,7 @@
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440895" name="WatchFace" parent="Layouts" startPc="268440732">
+        <functionEntry accessMode="public" endPc="268440934" name="WatchFace" parent="Layouts" startPc="268440771">
             <param id="dc"/>
             <documentation/>
         </functionEntry>

@@ -52,10 +52,10 @@ class RetroFaceView extends WatchUi.WatchFace {
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
 
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-        dc.clear();    
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);        
+        dc.clear();  
+        //----------------------Background shapes  
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-
         dc.setPenWidth(1); 
         RetroFaceView.drawSlantedSeparator(dc, 0, adaptPx(50), adaptPx(24), adaptPx(90), adaptPx(70), 3);
         RetroFaceView.drawSlantedSeparator(dc, 0, adaptPx(117), adaptPx(20), adaptPx(50), adaptPx(115), 3);
@@ -72,14 +72,16 @@ class RetroFaceView extends WatchUi.WatchFace {
                         [0,adaptPx(78+58-20)]]);
         RetroFaceView.drawParallelsPlanet(dc, adaptPx(144), adaptPx(31), adaptPx(30), false);
 
-        // Day month year textbox
+        //----------------------Day month year textbox
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.setPenWidth(1); 
         RetroFaceView.textBox(dc, adaptPx(71), adaptPx(148), adaptPx(84), adaptPx(18), fullCustomDate(), true);
 
         /*
         var utcOffset = System.ClockTime.timeZoneOffset==null ? 0 : Math.floor(System.ClockTime.timeZoneOffset/3600);        
         RetroFaceView.textBox(dc, adaptPx(5), adaptPx(53), adaptPx(45), adaptPx(18), "UTC "+utcOffset, false);*/
 
-        //Steps information
+        //----------------------Steps information
         var steps = ActivityMonitor.getInfo().steps;
         var stepGoal = ActivityMonitor.getInfo().stepGoal;
         var stepGoalAchieved = steps>=stepGoal;
@@ -87,7 +89,7 @@ class RetroFaceView extends WatchUi.WatchFace {
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(Math.round(screenSize*0.28), 116, Graphics.FONT_SYSTEM_XTINY, steps.toString(), Graphics.TEXT_JUSTIFY_RIGHT); // Step number displayed
-        //Steps graph
+        //----------------------Steps graph
         var startX = adaptPx(10);
         var startY = adaptPx(136);
         var height = adaptPx(5);
@@ -112,7 +114,7 @@ class RetroFaceView extends WatchUi.WatchFace {
             
         }
 
-        //Display heart rate
+        //----------------------Display heart rate
         //Draw fill shape and draw outline
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
         dc.fillPolygon([
@@ -133,7 +135,7 @@ class RetroFaceView extends WatchUi.WatchFace {
         var hrString = "HR "+hrValue.format("%03d");
         dc.drawText(adaptPx(50), adaptPx(2), Graphics.FONT_SMALL, hrString, Graphics.TEXT_JUSTIFY_LEFT);
 
-        //Battery information
+        //----------------------Battery information
         var batteryLevel = Math.floor(System.getSystemStats().batteryInDays).format("%02d");
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(adaptPx(23),adaptPx(25), Graphics.FONT_SYSTEM_TINY, batteryLevel+"d", Graphics.TEXT_JUSTIFY_LEFT);
